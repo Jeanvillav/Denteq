@@ -289,8 +289,8 @@ export async function cancelBooking(id: string) {
 
     if (error) throw error;
 
-    // Trigger Cancel Email Sequence
-    await sendCancelSequence(data);
+    // Trigger basic cancel email
+    await sendCancelEmail(data);
 
     return { success: true };
   } catch (err: any) {
@@ -325,7 +325,7 @@ export async function rescheduleBooking(id: string, newMeetingTime: string) {
 
     if (fetchError) throw fetchError;
 
-    // 3. Create a NEW Zoom meeting (we leave the old one alone, it will just expire, or you can delete it if you store the meeting ID)
+    // 3. Create a NEW Zoom meeting
     let zoomLink = oldBooking.zoom_link;
     if (process.env.ZOOM_ACCOUNT_ID) {
       const zoomToken = await getZoomAccessToken();
@@ -343,8 +343,8 @@ export async function rescheduleBooking(id: string, newMeetingTime: string) {
 
     if (error) throw error;
 
-    // Trigger Reschedule Email Sequence
-    await sendRescheduleSequence(data);
+    // Trigger basic reschedule email
+    await sendRescheduleEmail(data);
 
     return { success: true };
   } catch (err: any) {
@@ -354,9 +354,10 @@ export async function rescheduleBooking(id: string, newMeetingTime: string) {
 }
 
 // -----------------------------------------------------------------------------
-// PENDING EMAIL SEQUENCES (A la espera de textos y videos del Tío Kevin)
+// BASIC EMAIL NOTIFICATIONS
 // -----------------------------------------------------------------------------
-async function sendCancelSequence(bookingData: any) {
+
+async function sendCancelEmail(bookingData: any) {
   try {
     const emailData = getCancelledEmail1(bookingData);
     await transporter.sendMail({
@@ -365,21 +366,13 @@ async function sendCancelSequence(bookingData: any) {
       subject: emailData.subject,
       html: emailData.html,
     });
-    
-    // Set cancelled_step to 1 to trigger Cron for next steps
-    const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
-    await supabase.from("bookings").update({ 
-      cancelled_step: 1, 
-      last_email_sent_at: new Date().toISOString() 
-    }).eq("id", bookingData.id);
-    
-    console.log(`[Email Sequence] Cancel Email #1 sent to ${bookingData.email}`);
+    console.log(`[Email] Cancel Email sent to ${bookingData.email}`);
   } catch (err) {
-    console.error("Failed to send cancel sequence start:", err);
+    console.error("Failed to send cancel email:", err);
   }
 }
 
-async function sendRescheduleSequence(bookingData: any) {
+async function sendRescheduleEmail(bookingData: any) {
   try {
     const emailData = getBookedEmail1(bookingData);
     await transporter.sendMail({
@@ -388,15 +381,8 @@ async function sendRescheduleSequence(bookingData: any) {
       subject: (bookingData.language === 'es' ? "Reprogramado: " : "Rescheduled: ") + emailData.subject,
       html: emailData.html,
     });
-    
-    // Reset reminder so it triggers again 30 mins before the NEW time
-    const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
-    await supabase.from("bookings").update({ 
-      reminder_30m_sent: false
-    }).eq("id", bookingData.id);
-    
-    console.log(`[Email Sequence] Reschedule Email sent to ${bookingData.email}`);
+    console.log(`[Email] Reschedule Email sent to ${bookingData.email}`);
   } catch (err) {
-    console.error("Failed to send reschedule sequence start:", err);
+    console.error("Failed to send reschedule email:", err);
   }
 }
