@@ -13,17 +13,15 @@ export default function HeroSection() {
       
       <div className="max-w-5xl w-full relative z-10">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold leading-tight tracking-tight text-white uppercase drop-shadow-2xl">
-          SOLUCIONAMOS PROBLEMAS DENTALES DE FORMA RÁPIDA CUANDO: <span className="text-highlight">CABECEAN...</span>
+          SOLUCIONAMOS PROBLEMAS DE TUS PIEZAS DE MANO Y MICROMOTORES DENTALES DE FORMA RÁPIDA CUANDO: <span className="text-highlight">NO SUJETAN LAS FRESAS, NO TIENEN FUERZA, CABECEAN O SUENAN RARO</span>
         </h1>
         
-        <p className="mt-8 text-xl md:text-2xl text-gray-300 font-sans tracking-wide leading-relaxed max-w-3xl mx-auto font-medium">
-          Y LO MEJOR, SIN QUE TENGAS QUE SALIR DE TU CONSULTORIO, AHORRANDO HASTA UN <span className="text-highlight-cyan font-bold">90%</span> EN REPUESTOS.
+        <p className="mt-8 text-xl md:text-2xl text-gray-300 font-sans tracking-wide leading-relaxed max-w-3xl mx-auto font-medium uppercase">
+          - Y LO MEJOR, SIN QUE TENGAS QUE SALIR DE TU CONSULTORIO, AHORRANDO HASTA UN <span className="text-highlight-cyan font-bold">90%</span> EN REPUESTOS.
         </p>
 
         <div className="my-10 flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base font-bold text-gray-400 uppercase tracking-widest bg-white/5 py-3 px-8 rounded-full border border-white/10 backdrop-blur-sm w-max mx-auto shadow-lg">
-          <p>SERVICIO CURIER PUERTA/PUERTA ASEGURADO</p>
-          <span className="hidden md:block text-cyan-400">•</span>
-          <p>SIN GASTOS INNECESARIOS</p>
+          <p>SERVICIO CURIER PUERTA/PUERTA A NIVEL NACIONAL ASEGURADO</p>
         </div>
 
         <div className="mb-14 relative w-full max-w-4xl mx-auto pt-[56.25%] bg-black rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden group transition-transform duration-500 hover:scale-[1.02]">

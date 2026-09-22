@@ -13,8 +13,8 @@ export default function Footer() {
         <div className="relative w-72 h-24">
           <Image src="/LogoDenteq.jpeg" alt="Denteq Logo" fill className="object-contain" />
         </div>
-        <Link href="/admin" className="text-gray-400 text-sm tracking-widest uppercase mt-4 hover:text-gray-300 transition-colors">
-          © 2025 Denteq - All Rights Reserved - www.denteq.pro
+        <Link href="https://denteq-ec.vercel.app/es" className="text-gray-400 text-sm tracking-widest uppercase mt-4 hover:text-gray-300 transition-colors">
+          © 2026 Denteq - All Rights Reserved - denteq-ec.vercel.app
         </Link>
       </div>
     </footer>

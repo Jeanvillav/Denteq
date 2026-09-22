@@ -28,28 +28,53 @@ export default function AboutSection() {
 
         {/* Content Area */}
         <div className="flex-1 w-full space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed font-sans">
+          <p className="font-bold text-[var(--color-primary-dark)] text-2xl text-center md:text-left mb-8 border-b-2 border-[var(--color-accent-cyan)] pb-4">
+            Repuestos Para Todas Las Marcas Y Modelos En Un Solo Lugar, Ahorro De Tiempo Y Dinero.
+          </p>
+          
+          <p className="italic font-medium">Estimado Dr./Dra.:</p>
+          <p>Las piezas de mano siempre dan problemas...</p>
+          <ul className="list-none space-y-2">
+            <li>• No sujetan bien las fresas.</li>
+            <li>• No tienen fuerza de tallado.</li>
+            <li>• Cabecean.</li>
+            <li>• Producen ruidos extraños.</li>
+          </ul>
+          
+          <p>
+            Clientes me cuentan que han intentado cambiar repuestos o reparar, pero los problemas persisten.
+          </p>
+          
           <p>
             Inicié mi trayectoria en la industria dental en 1997 en Gran Bretaña, especializándome en Ingeniería Dental (Sistemas neumáticos/electrónicos).
           </p>
           <p>
             Con formación especializada, años de experiencia en campo y una visión enfocada en resultados, nuestra misión es ayudar a los profesionales de la odontología a mantener su equipamiento clínico en óptimas condiciones, evitando pérdidas de tiempo y dinero, y asegurando que cada consulta funcione con la máxima eficiencia.
           </p>
-          <p className="font-extrabold text-[var(--color-primary-dark)] text-2xl pt-4">
-            Agenda una llamada conmigo o con alguien de mi equipo.
+          <p className="font-bold text-[var(--color-primary-dark)] pt-4">
+            📅 Agenda una llamada conmigo o con alguien de mi equipo.
           </p>
           <p>
             Te explicaremos exactamente cómo este enfoque puede funcionar en tu clínica dental.
           </p>
           <div className="bg-[var(--color-light-bg)] border-l-4 border-[var(--color-accent-cyan)] p-6 rounded-r-xl my-8 shadow-sm">
-            <p className="text-gray-800 italic font-medium">
-              "Esta llamada no es una venta agresiva. Solo busca darte la información que necesitas para decidir con confianza."
+            <p className="text-gray-800 font-medium">
+              Esta llamada no es una venta agresiva. Solo busca darte la información que necesitas para decidir con confianza:
             </p>
+            <div className="mt-4 font-bold text-xl text-center md:text-left">
+              <p>✅ Sí</p>
+              <p className="my-1">o</p>
+              <p>❌ No</p>
+            </div>
           </div>
-          <p>
-            Da click en el botón abajo... Reserva la fecha y hora que más te convenga.
+          <p className="font-bold text-[var(--color-accent-yellow)] bg-[#0A0F24] inline-block px-4 py-2 rounded">
+            Haga click en el botón abajo...
+          </p>
+          <p className="font-bold underline decoration-[var(--color-accent-cyan)] underline-offset-4">
+            Reserve la fecha y hora que más le convenga.
           </p>
           <p className="font-bold text-2xl text-[var(--color-primary-dark)]">
-            ¡Hablamos pronto!
+            ¡Hablamos pronto! 👇
           </p>
           
           <div className="pt-8">
@@ -57,7 +82,7 @@ export default function AboutSection() {
               href="#booking"
               className="btn-primary"
             >
-              AGENDAR LLAMADA
+              Agenda Llamada
             </a>
           </div>
         </div>
