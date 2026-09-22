@@ -82,13 +82,8 @@ type BookingFormData = z.infer<typeof bookingSchema>;
 type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
-import { useTranslations } from "next-intl";
-
-import { useParams } from 'next/navigation';
 export default function BookingSection() {
-  const t = useTranslations('BookingSection');
-  const params = useParams();
-  const currentLocale = (params?.locale as string) || 'en';
+  const currentLocale = 'es';
   const [isMounted, setIsMounted] = useState(false);
   const [date, setDate] = useState<Value>(null);
   const [availableSlots, setAvailableSlots] = useState<Date[]>([]);
@@ -219,22 +214,43 @@ export default function BookingSection() {
   };
 
   return (
-    <section id="booking" className="w-full bg-[#f8fafc] px-4 py-24 flex flex-col items-center text-[#091124]">
-      <div className="max-w-4xl w-full text-center">
-        <h2 className="text-3xl md:text-5xl font-black text-[#091124] mb-4 tracking-tight">
-          {t('title')}
+    <section id="booking" className="w-full bg-[#0A0F24] px-4 py-24 flex flex-col items-center relative overflow-hidden">
+      {/* Dynamic background lighting */}
+      <div className="absolute top-[20%] left-[-10%] w-[50%] h-[50%] bg-[#00F2FE]/10 rounded-full blur-[120px] pointer-events-none"></div>
+      
+      <div className="max-w-4xl w-full text-center relative z-10">
+        <h2 className="text-4xl md:text-6xl font-serif font-extrabold text-white mb-8 tracking-tight drop-shadow-lg">
+          AGENDA UNA LLAMADA
         </h2>
-        <p className="text-xl md:text-2xl text-gray-700 mb-12">
-          {t('subtitle')}
-        </p>
+        
+        <div className="text-left max-w-3xl mx-auto space-y-6 mb-16 glass-card p-8 md:p-10 rounded-2xl">
+          <div className="flex items-start gap-4">
+            <span className="text-[var(--color-accent-cyan)] text-2xl font-black">✓</span>
+            <p className="text-lg md:text-xl text-gray-200">
+              <span className="font-bold text-white">Descubra cómo ahorrar tiempo y dinero:</span> Con soluciones técnicas rápidas y garantizadas para sus equipos dentales.
+            </p>
+          </div>
+          <div className="flex items-start gap-4">
+            <span className="text-[var(--color-accent-cyan)] text-2xl font-black">✓</span>
+            <p className="text-lg md:text-xl text-gray-200">
+              <span className="font-bold text-white">Acceda a repuestos originales/alternos y atención especializada:</span> Sin tener que buscar entre múltiples proveedores.
+            </p>
+          </div>
+          <div className="flex items-start gap-4">
+            <span className="text-[var(--color-accent-cyan)] text-2xl font-black">✓</span>
+            <p className="text-lg md:text-xl text-gray-200">
+              <span className="font-bold text-white">Evite interrupciones en su clínica:</span> Con nuestro servicio puerta a puerta y soporte técnico certificado a nivel nacional.
+            </p>
+          </div>
+        </div>
 
-        <div className="bg-white p-6 md:p-12 shadow-2xl rounded-2xl flex flex-col items-center">
+        <div className="bg-white p-8 md:p-12 shadow-[0_20px_60px_rgba(0,242,254,0.1)] rounded-3xl flex flex-col items-center max-w-2xl mx-auto border-4 border-[var(--color-light-bg)]">
           
           <div className="relative w-64 h-24 mb-8">
-            <Image src="/logo.png" alt="Intra-Systems Logo" fill className="object-contain" />
+            <Image src="/LogoDenteq.jpeg" alt="Denteq Logo" fill className="object-contain" />
           </div>
 
-          <h3 className="text-2xl font-bold mb-8">{t('selectTime')}</h3>
+          <h3 className="text-2xl font-bold mb-8">Selecciona una Hora</h3>
 
           <div className="flex flex-col md:flex-row gap-12 w-full justify-center">
             
@@ -256,7 +272,7 @@ export default function BookingSection() {
                       <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      <span>{t('timezone')}</span>
+                      <span>Tu Zona Horaria:</span>
                     </div>
                     <select
                       value={userTimezone}
@@ -282,7 +298,7 @@ export default function BookingSection() {
             <div className="flex-1 w-full flex flex-col items-center md:items-start">
               {isMounted && date instanceof Date && availableSlots.length > 0 && !selectedSlot && (
                 <div className="w-full">
-                  <h4 className="font-bold mb-4">{t('selectTime')}</h4>
+                  <h4 className="font-bold mb-4">Selecciona una Hora</h4>
                   <div className="grid grid-cols-2 gap-3 w-full">
                     {availableSlots.map((slot, idx) => (
                       <button
@@ -305,17 +321,17 @@ export default function BookingSection() {
                 <form className="w-full text-left space-y-4" onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex items-center justify-between bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6">
                     <div>
-                      <p className="text-sm text-gray-500 font-bold">{t('selectedTime')}</p>
+                      <p className="text-sm text-gray-500 font-bold">Hora Seleccionada</p>
                       <p className="font-bold text-blue-700">
                         {selectedSlot.toLocaleDateString([], { timeZone: userTimezone || undefined })} at {selectedSlot.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', timeZone: userTimezone || undefined })}
                       </p>
                     </div>
-                    <button type="button" onClick={() => setSelectedSlot(null)} className="text-sm underline text-blue-600 font-bold">{t('change')}</button>
+                    <button type="button" onClick={() => setSelectedSlot(null)} className="text-sm underline text-blue-600 font-bold">Cambiar</button>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-1">{t('firstName')}</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Nombre *</label>
                       <input 
                         {...register("firstName")}
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" 
@@ -324,7 +340,7 @@ export default function BookingSection() {
                       {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName.message}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-1">{t('lastName')}</label>
+                      <label className="block text-sm font-bold text-gray-700 mb-1">Apellido *</label>
                       <input 
                         {...register("lastName")}
                         className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" 
@@ -335,7 +351,7 @@ export default function BookingSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">{t('email')}</label>
+                    <label className="block text-sm font-bold text-gray-700 mb-1">Correo Electrónico *</label>
                     <input 
                       {...register("email")}
                       type="email"
@@ -346,7 +362,7 @@ export default function BookingSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">{t('phone')}</label>
+                    <label className="block text-sm font-bold text-gray-700 mb-1">Número de Teléfono *</label>
                     <Controller
                       name="phone"
                       control={control}
@@ -374,7 +390,7 @@ export default function BookingSection() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-1">{t('question')}</label>
+                    <label className="block text-sm font-bold text-gray-700 mb-1">¿Qué problema técnico o repuesto necesita para su clínica? *</label>
                     <textarea 
                       {...register("question")}
                       rows={3} 
@@ -391,14 +407,14 @@ export default function BookingSection() {
                       className="mt-1 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
                     />
                     <label htmlFor="terms" className="text-sm text-gray-600">
-                      {t('terms')}
+                      Acepto los términos y condiciones proporcionados por la empresa. Al proporcionar mi número de teléfono, acepto recibir mensajes de texto de la empresa.
                     </label>
                   </div>
                   {errors.termsAccepted && <p className="text-red-500 text-xs">{errors.termsAccepted.message}</p>}
 
                   {submitMessage && (
                     <div className={`p-4 rounded-lg font-bold text-center ${submitMessage.type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
-                      <p>{submitMessage.type === "success" ? t('successMessage') : submitMessage.text}</p>
+                      <p>{submitMessage.type === "success" ? "¡Gracias! Tu cita ha sido confirmada. Por favor revisa tu correo para obtener el enlace de Zoom." : submitMessage.text}</p>
                       {submitMessage.type === "success" && bookingResult && (
                         <a
                           href={getGoogleCalendarUrl(bookingResult.meetingTime, bookingResult.zoomLink)}
@@ -409,7 +425,7 @@ export default function BookingSection() {
                           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                           </svg>
-                          {t('addToGoogleCalendar')}
+                          Añadir a Google Calendar
                         </a>
                       )}
                     </div>
@@ -420,14 +436,14 @@ export default function BookingSection() {
                     disabled={isSubmitting || submitMessage?.type === "success"}
                     className="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition-colors mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmitting ? t('bookingLoading') : (submitMessage?.type === "success" ? "BOOKED!" : t('bookingButton'))}
+                    {isSubmitting ? "PROCESANDO..." : (submitMessage?.type === "success" ? "CONFIRMADO!" : "CONFIRMAR CITA")}
                   </button>
                 </form>
               )}
 
               {isMounted && !(date instanceof Date) && (
                 <div className="h-full flex items-center justify-center text-gray-400 font-medium text-center">
-                  {t('selectDate')}
+                  Por favor, selecciona una fecha en el calendario para ver los horarios disponibles.
                 </div>
               )}
             </div>

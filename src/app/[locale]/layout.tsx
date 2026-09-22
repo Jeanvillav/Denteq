@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Playfair_Display } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -7,21 +7,21 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Analytics } from "@vercel/analytics/react";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Intra-Systems | Total Control of Gingival Margins",
-  description: "Total control of gingival margins, fluids, and moisture in under 1 minute without using complicated, time-consuming retraction cords.",
+  title: "Denteq | Handpiece Repair & Courier",
+  description: "Servicio curier puerta a puerta a nivel nacional asegurado. Reparación de piezas de mano dentales.",
 };
 
 export default async function RootLayout({
@@ -41,7 +41,7 @@ export default async function RootLayout({
   return (
     <html lang={resolvedParams.locale} className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${montserrat.variable} ${playfair.variable} antialiased`}
+        className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-[#0A0F24] text-white`}
         suppressHydrationWarning
       >
         <NextIntlClientProvider messages={messages}>

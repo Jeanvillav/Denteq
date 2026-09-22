@@ -1,44 +1,48 @@
 "use client";
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+
 export default function HeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const t = useTranslations('HeroSection');
-  const tGlobal = useTranslations();
 
   return (
-    <section className="w-full bg-[#091124] px-4 pt-28 pb-16 flex flex-col items-center text-center">
-      <div className="max-w-4xl w-full">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-relaxed md:leading-relaxed lg:leading-relaxed tracking-wide text-white uppercase">
-          {t('titlePrefix')} <span className="text-highlight">{t('titleHighlight1')}</span>{t('titleMiddle')}<span className="text-highlight">{t('titleHighlight2')}</span>
+    <section className="w-full bg-hero px-4 pt-32 pb-24 flex flex-col items-center text-center relative overflow-hidden">
+      {/* Background glowing orbs */}
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-600/20 rounded-full blur-[100px] pointer-events-none"></div>
+      
+      <div className="max-w-5xl w-full relative z-10">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold leading-tight tracking-tight text-white uppercase drop-shadow-2xl">
+          SOLUCIONAMOS PROBLEMAS DENTALES DE FORMA RÁPIDA CUANDO: <span className="text-highlight">CABECEAN...</span>
         </h1>
         
-        <hr className="my-8 border-white/40 w-full" />
-
-        <p className="mt-8 mb-12 text-xl md:text-2xl text-white uppercase tracking-wider font-serif">
-          {t('subtitle')}
+        <p className="mt-8 text-xl md:text-2xl text-gray-300 font-sans tracking-wide leading-relaxed max-w-3xl mx-auto font-medium">
+          Y LO MEJOR, SIN QUE TENGAS QUE SALIR DE TU CONSULTORIO, AHORRANDO HASTA UN <span className="text-highlight-cyan font-bold">90%</span> EN REPUESTOS.
         </p>
 
-        <div className="mb-12 relative w-full pt-[56.25%] bg-black border-2 border-white/20 rounded-lg shadow-2xl overflow-hidden group">
+        <div className="my-10 flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base font-bold text-gray-400 uppercase tracking-widest bg-white/5 py-3 px-8 rounded-full border border-white/10 backdrop-blur-sm w-max mx-auto shadow-lg">
+          <p>SERVICIO CURIER PUERTA/PUERTA ASEGURADO</p>
+          <span className="hidden md:block text-cyan-400">•</span>
+          <p>SIN GASTOS INNECESARIOS</p>
+        </div>
+
+        <div className="mb-14 relative w-full max-w-4xl mx-auto pt-[56.25%] bg-black rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden group transition-transform duration-500 hover:scale-[1.02]">
           {!isPlaying ? (
             <div 
-              className="absolute inset-0 w-full h-full cursor-pointer flex flex-col items-center justify-center z-10 bg-black/40 hover:bg-black/20 transition-all duration-300"
+              className="absolute inset-0 w-full h-full cursor-pointer flex flex-col items-center justify-center z-10 bg-black/50 hover:bg-black/30 transition-all duration-300 backdrop-blur-[2px]"
               onClick={() => setIsPlaying(true)}
             >
-              {/* Thumbnail image behind overlay */}
               <img 
                 src="https://img.youtube.com/vi/Hv8_lFwsaQs/maxresdefault.jpg" 
                 alt="Video Thumbnail" 
-                className="absolute inset-0 w-full h-full object-cover -z-10"
+                className="absolute inset-0 w-full h-full object-cover -z-10 scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
               />
-              {/* Dark gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/80 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F24]/90 via-transparent to-[#0A0F24]/50 -z-10"></div>
               
-              {/* Bouncing & Pulsing Play Button */}
-              <div className="animate-bounce">
-                <div className="bg-red-600 text-white rounded-full p-5 shadow-[0_0_30px_rgba(220,38,38,0.6)] animate-pulse hover:scale-110 transition-transform duration-300">
-                  <svg className="w-12 h-12 ml-2" fill="currentColor" viewBox="0 0 24 24">
+              <div className="relative group-hover:scale-110 transition-transform duration-300">
+                <div className="absolute inset-0 bg-[var(--color-accent-yellow)] rounded-full blur-xl opacity-60 animate-pulse"></div>
+                <div className="relative bg-[var(--color-accent-yellow)] text-[#0A0F24] rounded-full p-6 shadow-2xl">
+                  <svg className="w-10 h-10 ml-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z" />
                   </svg>
                 </div>
@@ -48,7 +52,7 @@ export default function HeroSection() {
             <iframe
               className="absolute inset-0 w-full h-full"
               src="https://www.youtube.com/embed/Hv8_lFwsaQs?autoplay=1&mute=0&rel=0"
-              title="Intra-Systems Pitch"
+              title="Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -58,9 +62,9 @@ export default function HeroSection() {
 
         <a 
           href="#booking"
-          className="border border-white text-white bg-transparent font-['Aboreto'] font-bold uppercase tracking-wider px-10 py-5 hover:bg-white hover:text-[#091124] transition-colors duration-300 shadow-md inline-block"
+          className="btn-primary text-lg md:text-xl px-12 py-5 shadow-[0_0_30px_rgba(253,243,84,0.3)]"
         >
-          {tGlobal('makeAppointment')}
+          AGENDAR LLAMADA
         </a>
       </div>
     </section>

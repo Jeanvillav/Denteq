@@ -11,44 +11,6 @@
     "makeAppointment": "BOOK A CALL",
     "clickToPlay": "🔊 CLICK TO PLAY VIDEO"
   },
-  "PillarsSection": {
-    "section1Title": "A smarter choice over traditional methods...",
-    "pillar1Title": "Affordability",
-    "pillar1Desc1": "The most reasonably priced system on the market without compromising on quality or performance.",
-    "pillar1Desc2": "Low entry costs and no expensive consumables.",
-    "pillar2Title": "Guaranteed ROI",
-    "pillar2Desc1": "Fastest and best return on investment. See an immediate impact on your bottom line with a system that pays for itself quickly and effortlessly.",
-    "pillar3Title": "Patient Growth",
-    "pillar3Desc1": "Attracts more patients effortlessly, helping you grow your practice.",
-    "pillar3Desc2": "Retain more patients, allows you to handle more treatments in-house keeping patients with you.",
-    "pillar4Title": "Patient loyalty",
-    "pillar4Desc1": "Achieve balance, and cultivate patient loyalty. Elevate your dental practice with lasting patient relationships and the success you deserve, offering new procedures patients want and need.",
-    "pillar5Title": "Love laser dentistry",
-    "pillar5Desc1": "All the new production comes from the soft tissue and photobiomodulation applications that most practices don't have a good way of doing, this means you'll have the ability to do them very quickly very easily and profitably.",
-    "pillar5Desc2": "Lasers are versatile and suitable for every dental specialty, bringing passion and purpose to your dentistry.",
-    "section2Title": "Lasers are the smarter solution for dental practices...",
-    "deliversAffordability": "Delivers affordability",
-    "affordabilityDesc": "Keeps costs under control without compromising quality, ensuring excellent value for your investment",
-    "deliversGrowth": "Delivers Patient Growth",
-    "growthDesc": "Attracts new patients in autopilot, helping your practice stand out in a competitive market",
-    "deliversROI": "Delivers Guaranteed ROI",
-    "roiDesc": "Offering tangible results you can count on to grow your practice sustainably",
-    "readyToLearn": "If you are ready to learn more about lasers",
-    "bookCall": "book a call with me or my team",
-    "makeAppointment": "MAKE AN APPOINTMENT",
-    "withoutLasersTitle": "Without Lasers:",
-    "without1": "You lose patients to practices offering faster, more comfortable treatments.",
-    "without2": "Referral rates increase, reducing revenue and patient loyalty.",
-    "without3": "Traditional methods limit efficiency, treatment options, and practice growth.",
-    "without4": "You blend in with every other clinic, competing for the same patients who don't see any distinction between practices.",
-    "withoutSummary": "Without them, it's harder to attract and retain patients.",
-    "withLasersTitle": "With Lasers:",
-    "with1": "Provide faster, more comfortable treatments that patients love.",
-    "with2": "Perform advanced procedures in-house, reducing referrals and boosting revenue.",
-    "with3": "Attract new patients effortlessly, improve efficiency, and build long-term loyalty. Achieve professional success.",
-    "with4": "Total pain management, precise fluid and blood control, essential particulary during composite restorations.",
-    "withSummary": "Perform them quickly, easily, and profitably— Lasers are versatile and suitable for every dental specialty, reigniting your passion and purpose for dentistry."
-  },
   "LetterSection": {
     "title": "THIS IS THE DIFFERENCE:",
     "greeting": "The old way...",
@@ -94,15 +56,6 @@
     "supportDesc": "As your go-to resource for dental laser technology, I bring years of experience and a genuine passion for helping practices thrive. I'm here to offer friendly, tailored support, providing you with the tools and strategies you need to enhance patient care, boost efficiency, and take your practice to the next level.",
     "bookCall": "BOOK A CALL"
   },
-  "TestimonialsSection": {
-    "title": "WHAT DOCTORS SAY ABOUT US",
-    "t1": "Everything is great, I have used it a few times and I have to say I am really impresed. The quality and performance have exceeded my expectations, and it's been a pleasure to use. It’s reliable, easy to use, and definitely worth it. I am very happy with it.",
-    "author1": "Dr. Ruxandra.",
-    "clinic1": "3 Dental Dublin.",
-    "t2": "I have been using the laser and it is performing just as I hoped. It’s been reliable, smooth, and overall a great experience. Looking forward to more results with continued use.",
-    "author2": "Dr. Brent.",
-    "clinic2": "Chapel House Dentistry."
-  },
   "BookingSection": {
     "title": "BOOK YOUR CALL",
     "subtitle": "Discover how to save time and money with fast and guaranteed technical solutions for your dental equipment.",
@@ -127,30 +80,28 @@
     "email": "info@denteq.pro"
   },
   "makeAppointment": "MAKE AN APPOINTMENT",
-  "pgHeadline": "ACHIEVE PRACTICE GROWTH, PATIENT LOYALTY AND LOVE LASER DENTISTRY",
-  "pgTitle1": "PATIENT GROWTH",
-  "pgDesc1": "Attracts more patients effortlessly, helping you grow your practice. Retain more patients, allows you to handle more treatments in-house keeping patients with you.",
-  "pgTitle2": "PATIENT LOYALTY",
-  "pgDesc2": "Achieve balance, and cultivate patient loyalty. Elevate your dental practice with lasting patient relationships and the success you deserve, offering new procedures patients want and need.",
-  "pgTitle3": "LOVE LASER DENTISTRY",
-  "pgDesc3": "All the new production comes from the soft tissue and photobiomodulation applications that most practices don't have a good way of doing, this means you’ll have the ability to do them very quickly very easily and profitably. Lasers are versatile and suitable for every dental specialty, bringing passion and purpose to your dentistry.",
-  "smSmarterHeadline": "Lasers are the smarter solution for dental practices...",
-  "smTitle1": "Delivers affordability",
-  "smDesc1": "Keeps costs under control without compromising quality, ensuring excellent value for your investment",
-  "smTitle2": "Delivers Patient Growth",
-  "smDesc2": "Attracts new patients in autopilot, helping your practice stand out in a competitive market",
-  "smTitle3": "Delivers Guaranteed ROI",
-  "smDesc3": "Offering tangible results you can count on to grow your practice sustainably",
-  "smReadyText": "If you are ready to learn more about lasers...",
-  "smBookCallText": "BOOK A CALL WITH ME OR MY TEAM",
-  "cmpTitle1": "Without lasers:",
-  "cmpDesc1a": "You lose patients to practices offering faster, more comfortable treatments.",
-  "cmpDesc1b": "Referral rates increase, reducing revenue and patient loyalty.",
-  "cmpDesc1c": "Traditional methods limit efficiency, treatment options, and practice growth.",
-  "cmpDesc1d": "You blend in with every other clinic, competing for the same patients who don’t see any distinction between practices.",
-  "cmpDesc1e": "Without them, it’s harder to attract and retain patients.",
-  "cmpTitle2": "With lasers:",
-  "cmpDesc2a": "Provide faster, more comfortable treatments that patients love. Perform advanced procedures in-house, reducing referrals and boosting revenue. Attract new patients effortlessly, improve efficiency, and build long-term loyalty. Achieve professional success.",
-  "cmpDesc2b": "Total pain management, precise fluid and blood control, essential particulary during composite restorations.",
-  "cmpDesc2c": "Perform them quickly, easily, and profitably— Lasers are versatile and suitable for every dental specialty, reigniting your passion and purpose for dentistry."
+  "ProblemHighlightSection": {
+    "title1": "WE FIX DENTAL HANDPIECES QUICKLY WHEN THEY:",
+    "cause1": "WOBBLE",
+    "cause2": "DON'T HOLD BURS",
+    "cause3": "MAKE STRANGE NOISES",
+    "cause4": "GET BLOCKED",
+    "savings": "AND BEST OF ALL, WITHOUT LEAVING YOUR CLINIC, SAVING UP TO 90% ON REPAIRS."
+  },
+  "ClientsSection": {
+    "title": "Some Of Our Clients:"
+  },
+  "ComparisonSection": {
+    "title": "This Is How We Do It:"
+  },
+  "BenefitsSection": {
+    "b1Title": "Insured Courier (Ecuador)",
+    "b1Desc": "Total convenience and peace of mind",
+    "b2Title": "Fast Repairs",
+    "b2Desc": "Clinic/Practice always productive",
+    "b3Title": "Time Savings",
+    "b3Desc": "In one place without the need to search multiple suppliers",
+    "b4Title": "Warranty on Repairs",
+    "b4Desc": "Zero risk"
+  }
 }

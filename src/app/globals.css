@@ -1,14 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-montserrat);
-  --font-serif: var(--font-playfair);
-  --color-primary-dark: #0f0762;
-  --color-primary-dark-gradient-start: #181356;
-  --color-primary-dark-gradient-end: #0f0762;
-  --color-accent-yellow: #fcf133;
-  --color-accent-gray: #bcbcbc;
-  --color-light-bg: #fafafb;
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-outfit);
+  
+  --color-primary-dark: #0A0F24;
+  --color-primary-dark-gradient-start: #0B1330;
+  --color-primary-dark-gradient-end: #050814;
+  
+  --color-accent-yellow: #FDF354;
+  --color-accent-red: #FF3B30;
+  --color-accent-cyan: #00F2FE;
+  
+  --color-light-bg: #F4F6F9;
 }
 
 @layer base {
@@ -23,73 +27,89 @@ body {
   background: var(--background);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text-highlight {
   color: var(--color-accent-yellow);
-  text-decoration: underline;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 6px;
-  text-decoration-color: var(--color-accent-yellow);
+  text-shadow: 0 0 15px rgba(253, 243, 84, 0.4);
+}
+
+.text-highlight-cyan {
+  color: var(--color-accent-cyan);
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
 }
 
 .bg-hero {
-  background: radial-gradient(circle at left, var(--color-primary-dark-gradient-start) 0%, var(--color-primary-dark-gradient-end) 100%);
+  background: radial-gradient(circle at top right, var(--color-primary-dark-gradient-start) 0%, var(--color-primary-dark-gradient-end) 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary {
-  @apply border border-[var(--color-accent-yellow)] bg-[var(--color-accent-yellow)] text-[#0f0762] px-10 py-4 uppercase tracking-widest transition-all duration-300 font-bold hover:bg-transparent hover:text-[var(--color-accent-yellow)] inline-block text-center cursor-pointer font-serif rounded-xl;
+  @apply bg-[var(--color-accent-yellow)] text-[#0A0F24] px-10 py-4 uppercase tracking-widest transition-all duration-300 font-bold font-serif rounded-xl border border-transparent hover:scale-105 shadow-[0_0_20px_rgba(253,243,84,0.4)] hover:shadow-[0_0_30px_rgba(253,243,84,0.6)] inline-block text-center cursor-pointer;
 }
 
-/* React Calendar Overrides */
+/* React Calendar Overrides for Modern Booking */
 .react-calendar {
   width: 100% !important;
   max-width: 400px;
-  background: white;
+  background: rgba(255,255,255,0.95);
   border: none !important;
   font-family: inherit !important;
-  color: #0f0762;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  color: #0A0F24;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
 }
 
 .react-calendar__navigation button {
-  color: #0f0762 !important;
+  color: #0A0F24 !important;
   min-width: 44px;
   background: none;
   font-size: 16px;
+  font-weight: 600;
   margin-top: 8px;
 }
 .react-calendar__navigation button:enabled:hover,
 .react-calendar__navigation button:enabled:focus {
-  background-color: #f3f4f6 !important;
+  background-color: #F4F6F9 !important;
+  border-radius: 8px;
 }
 .react-calendar__month-view__weekdays {
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 0.8em;
   color: #6b7280;
 }
 .react-calendar__tile {
   padding: 14px 10px !important;
-  font-weight: 500;
+  font-weight: 600;
 }
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
-  background-color: #f3f4f6 !important;
-  color: #0f0762;
-  border-radius: 9999px;
+  background-color: #F4F6F9 !important;
+  color: #0A0F24;
+  border-radius: 12px;
 }
 .react-calendar__tile--now {
-  background: #fcf133 !important;
-  color: #0f0762 !important;
-  border-radius: 9999px;
+  background: transparent !important;
+  border: 2px solid #00F2FE !important;
+  color: #0A0F24 !important;
+  border-radius: 12px;
 }
 .react-calendar__tile--active {
-  background: #0f0762 !important;
+  background: #0A0F24 !important;
   color: white !important;
-  border-radius: 9999px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(10, 15, 36, 0.4);
 }
 .react-calendar__tile:disabled {
   background-color: transparent !important;
