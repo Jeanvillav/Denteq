@@ -3,12 +3,12 @@
 @theme {
   --font-sans: var(--font-montserrat);
   --font-serif: var(--font-playfair);
-  --color-primary-dark: #091124;
-  --color-primary-dark-gradient-start: #0a1124;
-  --color-primary-dark-gradient-end: #091124;
-  --color-accent-yellow: #fdf354;
-  --color-accent-green: #dde9cd;
-  --color-light-bg: #f9f9f9;
+  --color-primary-dark: #0f0762;
+  --color-primary-dark-gradient-start: #181356;
+  --color-primary-dark-gradient-end: #0f0762;
+  --color-accent-yellow: #fcf133;
+  --color-accent-gray: #bcbcbc;
+  --color-light-bg: #fafafb;
 }
 
 @layer base {
@@ -38,7 +38,7 @@ body {
 }
 
 .btn-primary {
-  @apply border border-[var(--color-accent-yellow)] bg-transparent text-[var(--color-accent-yellow)] px-10 py-4 uppercase tracking-widest transition-all duration-300 font-bold hover:bg-[var(--color-accent-yellow)] hover:text-[#091124] inline-block text-center cursor-pointer font-serif;
+  @apply border border-[var(--color-accent-yellow)] bg-[var(--color-accent-yellow)] text-[#0f0762] px-10 py-4 uppercase tracking-widest transition-all duration-300 font-bold hover:bg-transparent hover:text-[var(--color-accent-yellow)] inline-block text-center cursor-pointer font-serif rounded-xl;
 }
 
 /* React Calendar Overrides */
@@ -48,14 +48,14 @@ body {
   background: white;
   border: none !important;
   font-family: inherit !important;
-  color: #091124;
+  color: #0f0762;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
 .react-calendar__navigation button {
-  color: #091124 !important;
+  color: #0f0762 !important;
   min-width: 44px;
   background: none;
   font-size: 16px;
@@ -78,16 +78,16 @@ body {
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
   background-color: #f3f4f6 !important;
-  color: #091124;
+  color: #0f0762;
   border-radius: 9999px;
 }
 .react-calendar__tile--now {
   background: #fcf133 !important;
-  color: #091124 !important;
+  color: #0f0762 !important;
   border-radius: 9999px;
 }
 .react-calendar__tile--active {
-  background: #091124 !important;
+  background: #0f0762 !important;
   color: white !important;
   border-radius: 9999px;
 }

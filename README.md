@@ -1,10 +1,10 @@
-# Intra-Systems: Dental Lasers Landing Page & Booking App
+# Denteq: Dental Handpiece Repair & Courier Booking App
 
-This project is a modern landing page and automated consultation booking system for **Intra-Systems** (a company offering soft-tissue lasers to dental practices). 
+This project is a modern landing page and automated consultation booking system for **Denteq** (a company offering dental handpiece repair and national courier services in Ecuador). 
 
 ## 🏗️ Tech Stack & Architecture
 - **Framework:** [Next.js](https://nextjs.org/) (App Router, React 18).
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) with a custom design system based on `globals.css` (Colors: `#141B4D` Dark Blue, `#F9F9F9` Off-White, `#DDE9CD` Light Green).
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) with a custom design system based on `globals.css` (Colors: `#0F0762` Navy Blue, `#FAFAFB` Off-White, `#BCBCBC` Gray).
 - **Typography:** `Montserrat` (Sans-serif) and `Playfair Display` (Serif for headings/premium feel).
 - **Database:** [Supabase](https://supabase.com/) (PostgreSQL).
 - **Integrations:** 
