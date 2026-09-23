@@ -74,7 +74,7 @@ export async function submitBooking(data: any) {
         // 2. Correo al Dueño (Tío Kevin)
         await transporter.sendMail({
           from: `"Denteq System" <${process.env.GMAIL_USER}>`,
-          to: process.env.GMAIL_USER, // Notificación al dueño
+          to: "denteq.ec@gmail.com", // Notificación al correo de Tío Kevin
           subject: `NUEVA RECOLECCIÓN: ${data.firstName} ${data.lastName} - ${data.city}`,
           html: `
             <div style="font-family: Arial, sans-serif;">
