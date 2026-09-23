@@ -65,7 +65,7 @@ export default function BenefitsSection() {
                 className="glass-card flex flex-col p-5 rounded-2xl transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_16px_48px_rgba(0,207,222,0.18)] group cursor-default relative overflow-hidden"
               >
                 {/* Número de orden — decorativo */}
-                <span className={`absolute top-3 right-4 text-3xl font-black opacity-10 ${c.num} select-none`} aria-hidden="true">
+                <span className={`absolute top-3 right-4 text-4xl font-black opacity-[0.25] ${c.num} select-none`} aria-hidden="true">
                   {b.num}
                 </span>
 
@@ -76,10 +76,10 @@ export default function BenefitsSection() {
                   </svg>
                 </div>
 
-                <h3 className="text-sm font-extrabold font-serif text-white mb-2 uppercase leading-snug">
+                <h3 className="text-base font-extrabold font-serif text-white mb-2 uppercase leading-snug">
                   {b.keyTitle}
                 </h3>
-                <p className="text-gray-400 text-xs leading-relaxed">{b.keyDesc}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{b.keyDesc}</p>
               </div>
             );
           })}

@@ -138,6 +138,12 @@ body {
   100% { left: 200%; opacity: 0; }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .animate-float { animation: float 4s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
 .animate-shine { animation: shine 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+.animate-marquee { animation: marquee 25s linear infinite; }
