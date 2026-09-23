@@ -33,7 +33,7 @@ export default function AboutSection() {
             </div>
             {/* Badge de experiencia */}
             <div className="absolute -bottom-2 -right-2 bg-[var(--color-accent-cyan)] text-[var(--color-primary-dark)] text-xs font-extrabold rounded-full px-3 py-1.5 shadow-lg whitespace-nowrap">
-              +29 años
+              Desde 1997
             </div>
           </div>
 
@@ -44,13 +44,11 @@ export default function AboutSection() {
             Director de Denteq
           </span>
 
-          {/* Timeline de trayectoria */}
-          <div className="mt-6 flex items-center gap-2 text-xs font-semibold text-gray-500">
-            <span className="bg-[var(--color-light-bg)] px-3 py-1.5 rounded-full">🇬🇧 Gran Bretaña</span>
-            <span className="text-[var(--color-accent-cyan)] font-black">→</span>
-            <span className="bg-[var(--color-light-bg)] px-3 py-1.5 rounded-full">⚙️ Ing. Dental 1997</span>
-            <span className="text-[var(--color-accent-cyan)] font-black">→</span>
-            <span className="bg-[var(--color-accent-cyan)]/10 border border-[var(--color-accent-cyan)]/30 text-[var(--color-primary-dark)] px-3 py-1.5 rounded-full font-extrabold">🇪🇨 Denteq 2026</span>
+          {/* Especialidades */}
+          <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs font-bold text-[var(--color-primary-dark)]">
+            <span className="bg-[var(--color-light-bg)] px-3 py-1.5 rounded-full border border-[var(--color-mid-bg)]">🇬🇧 Formado en Gran Bretaña</span>
+            <span className="bg-[var(--color-light-bg)] px-3 py-1.5 rounded-full border border-[var(--color-mid-bg)]">⚙️ Ingeniería Dental</span>
+            <span className="bg-[var(--color-light-bg)] px-3 py-1.5 rounded-full border border-[var(--color-mid-bg)]">🦷 Sistemas Neumáticos / Electrónicos</span>
           </div>
         </div>
 
@@ -62,9 +60,9 @@ export default function AboutSection() {
             <span className="text-[var(--color-primary-dark)]">Ahorro De Tiempo Y Dinero.</span>
           </h3>
 
-          <p className="italic font-semibold text-gray-500">Estimado Dr./Dra.:</p>
+          <p className="italic font-bold text-[var(--color-primary-dark)]">Estimado Dr./Dra.:</p>
 
-          <p className="underline underline-offset-4 decoration-gray-400 font-semibold text-gray-800">
+          <p className="underline underline-offset-4 font-bold text-[var(--color-primary-dark)]">
             Las piezas de mano siempre dan problemas...
           </p>
 
@@ -78,7 +76,7 @@ export default function AboutSection() {
             ))}
           </ul>
 
-          <p className="italic text-gray-500 text-sm">
+          <p className="italic text-[var(--color-primary-dark)] font-medium text-sm">
             Clientes me cuentan que han intentado cambiar repuestos o reparar, pero los problemas persisten.
           </p>
 
@@ -88,30 +86,30 @@ export default function AboutSection() {
             Inicié mi trayectoria en la industria dental en <strong>1997 en Gran Bretaña</strong>, especializándome en{" "}
             <strong>Ingeniería Dental (Sistemas neumáticos/electrónicos)</strong>.
           </p>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-[var(--color-primary-dark)] font-medium">
             Con formación especializada, años de experiencia en campo y una visión enfocada en resultados, nuestra misión es ayudar a los profesionales de la odontología a mantener su equipamiento clínico en óptimas condiciones, evitando pérdidas de tiempo y dinero, y asegurando que cada consulta funcione con la máxima eficiencia.
           </p>
 
-          <p className="font-bold text-[var(--color-primary-dark)]">
+          <p className="font-bold text-[var(--color-primary-dark)] mt-8">
             🚚 Solicita la recolección gratuita de tus piezas.
           </p>
-          <p className="text-sm text-gray-600">No tienes que salir de tu consultorio. Nosotros nos encargamos de todo.</p>
+          <p className="text-sm text-[var(--color-primary-dark)] font-medium">No tienes que salir de tu consultorio. Nosotros nos encargamos de todo.</p>
 
           {/* === Caja de decisión mejorada === */}
-          <div className="bg-[var(--color-light-bg)] border border-[var(--color-mid-bg)] rounded-2xl p-5 shadow-sm" role="region" aria-label="Sin venta agresiva — decide con confianza">
-            <p className="text-gray-700 font-semibold text-sm mb-4 text-center">
-              Esta recolección <strong>no es una venta agresiva.</strong><br />
+          <div className="bg-[var(--color-light-bg)] border border-[var(--color-accent-cyan)]/40 rounded-2xl p-5 shadow-sm" role="region" aria-label="Sin venta agresiva — decide con confianza">
+            <p className="text-[var(--color-primary-dark)] font-bold text-sm mb-4 text-center">
+              Este proceso <strong>no es una venta agresiva.</strong><br />
               Solo busca darle la información que necesita para <strong>decidir con confianza:</strong>
             </p>
             <div className="flex gap-3">
-              <div className="flex-1 bg-white rounded-xl p-4 text-center shadow-sm border-2 border-green-200 hover:border-green-400 transition-colors">
+              <div className="flex-1 bg-white rounded-xl p-4 text-center shadow-sm border-2 border-green-400">
                 <span className="text-3xl block mb-1" aria-hidden="true">✅</span>
-                <span className="font-extrabold text-sm text-[var(--color-primary-dark)]">Sí, reparan</span>
+                <span className="font-extrabold text-sm text-[var(--color-primary-dark)]">Sí</span>
               </div>
-              <div className="flex items-center text-gray-400 text-xs font-medium">o</div>
-              <div className="flex-1 bg-white rounded-xl p-4 text-center shadow-sm border-2 border-gray-200 hover:border-gray-400 transition-colors">
-                <span className="text-3xl block mb-1" aria-hidden="true">↩️</span>
-                <span className="font-extrabold text-sm text-gray-500">La devuelven</span>
+              <div className="flex items-center text-[var(--color-primary-dark)] text-sm font-extrabold">o</div>
+              <div className="flex-1 bg-white rounded-xl p-4 text-center shadow-sm border-2 border-red-400">
+                <span className="text-3xl block mb-1" aria-hidden="true">❌</span>
+                <span className="font-extrabold text-sm text-[var(--color-primary-dark)]">No</span>
               </div>
             </div>
           </div>
