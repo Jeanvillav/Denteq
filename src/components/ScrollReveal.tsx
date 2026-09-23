@@ -1,0 +1,55 @@
+"use client";
+
+import { useEffect, useRef, useState, ReactNode } from "react";
+
+interface ScrollRevealProps {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}
+
+export default function ScrollReveal({ children, className = "", delay = 0 }: ScrollRevealProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (ref.current) {
+            observer.unobserve(ref.current);
+          }
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -50px 0px", // Trigger slightly before it comes into view or slightly after
+        threshold: 0.15,
+      }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-1000 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      } ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </div>
+  );
+}

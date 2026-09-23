@@ -40,15 +40,9 @@ export default function StickyHeader() {
         <div className={`flex items-center transition-all duration-500 ${isScrolled ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4 pointer-events-none"}`}>
           <a 
             href="#booking"
-            className="hidden md:inline-block btn-primary px-5 py-2.5 text-xs md:text-sm shadow-none hover:shadow-[0_0_15px_rgba(247,233,58,0.4)]"
+            className="btn-primary !px-4 md:!px-5 !py-2 md:!py-2.5 text-xs md:text-sm shadow-none hover:shadow-[0_0_15px_rgba(247,233,58,0.4)] whitespace-nowrap flex items-center gap-1"
           >
-            🚚 ENVIAR PIEZAS
-          </a>
-          <a 
-            href="#booking"
-            className="md:hidden bg-[var(--color-accent-yellow)] text-[#050D1F] px-4 py-2 text-xs font-bold rounded-lg shadow-sm"
-          >
-            🚚 ENVIAR
+            🚚 <span className="hidden sm:inline">ENVIAR PIEZAS</span><span className="sm:hidden">ENVIAR</span>
           </a>
         </div>
       </div>
