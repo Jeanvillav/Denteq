@@ -20,7 +20,7 @@ export default function ClientsSection() {
           {clients.map((c, i) => (
             <div
               key={i}
-              className="h-16 w-36 bg-[var(--color-light-bg)] border border-[var(--color-mid-bg)] rounded-xl shadow-sm flex items-center justify-center p-3 hover:shadow-md hover:border-[var(--color-accent-cyan)]/40 transition-all duration-300"
+              className="h-24 w-44 bg-[var(--color-light-bg)] border border-[var(--color-mid-bg)] rounded-xl shadow-sm flex items-center justify-center p-3 hover:shadow-md hover:border-[var(--color-accent-cyan)]/40 transition-all duration-300"
             >
               <div className="relative w-full h-full">
                 <Image
