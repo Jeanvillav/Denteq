@@ -23,7 +23,7 @@ const pickupSchema = z.object({
   pickupDate: z.string().min(2, "Por favor selecciona un día de recolección"),
   question: z.string().min(2, "Por favor detalla el problema o las piezas"),
   termsAccepted: z.literal(true, {
-    errorMap: () => ({ message: "Debes aceptar los términos y condiciones" }),
+    message: "Debes aceptar los términos y condiciones",
   }),
 });
 
