@@ -19,7 +19,8 @@ const pickupSchema = z.object({
   mainStreet: z.string().min(2, "La calle principal es requerida"),
   crossStreet: z.string().min(2, "La calle transversal es requerida"),
   houseNumber: z.string().min(1, "El número de casa/consultorio es requerido"),
-  businessHours: z.string().min(2, "El horario de atención es requerido"),
+  openTime: z.string().min(1, "Apertura requerida"),
+  closeTime: z.string().min(1, "Cierre requerido"),
   pickupDate: z.string().min(2, "Por favor selecciona un día de recolección"),
   question: z.string().min(2, "Por favor detalla el problema o las piezas"),
   termsAccepted: z.literal(true, {
@@ -47,8 +48,13 @@ export default function BookingSection() {
     setIsSubmitting(true);
     setSubmitMessage(null);
     
-    console.log("Sending payload:", data);
-    const result = await submitBooking(data);
+    const payload = {
+      ...data,
+      businessHours: `${data.openTime} a ${data.closeTime}`
+    };
+    
+    console.log("Sending payload:", payload);
+    const result = await submitBooking(payload);
     setIsSubmitting(false);
 
     if (result.success) {
@@ -189,12 +195,25 @@ export default function BookingSection() {
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-1">Horario de Atención *</label>
-                      <input 
-                        {...register("businessHours")}
-                        className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none bg-gray-50 text-gray-800" 
-                        placeholder="Ej. 09:00 a 17:00"
-                      />
-                      {errors.businessHours && <p className="text-red-500 text-xs mt-1">{errors.businessHours.message}</p>}
+                      <div className="flex items-start gap-2">
+                        <div className="flex-1">
+                          <input 
+                            type="time"
+                            {...register("openTime")}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none bg-gray-50 text-gray-800" 
+                          />
+                          {errors.openTime && <p className="text-red-500 text-xs mt-1">{errors.openTime.message}</p>}
+                        </div>
+                        <span className="font-bold text-gray-500 mt-3">a</span>
+                        <div className="flex-1">
+                          <input 
+                            type="time"
+                            {...register("closeTime")}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none bg-gray-50 text-gray-800" 
+                          />
+                          {errors.closeTime && <p className="text-red-500 text-xs mt-1">{errors.closeTime.message}</p>}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
