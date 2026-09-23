@@ -7,44 +7,64 @@ export default function HeroSection() {
 
   return (
     <section className="w-full bg-hero px-4 pt-32 pb-24 flex flex-col items-center text-center relative overflow-hidden">
-      {/* Background glowing orbs */}
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-600/20 rounded-full blur-[100px] pointer-events-none"></div>
-      
-      <div className="max-w-5xl w-full relative z-10">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold leading-tight tracking-tight text-white uppercase drop-shadow-2xl">
-          SOLUCIONAMOS PROBLEMAS DE TUS PIEZAS DE MANO Y MICROMOTORES DENTALES DE FORMA RÁPIDA CUANDO: <span className="text-highlight">NO SUJETAN LAS FRESAS, NO TIENEN FUERZA, CABECEAN O SUENAN RARO</span>
-        </h1>
-        
-        <p className="mt-8 text-xl md:text-2xl text-gray-300 font-sans tracking-wide leading-relaxed max-w-3xl mx-auto font-medium uppercase">
-          - Y LO MEJOR, SIN QUE TENGAS QUE SALIR DE TU CONSULTORIO, AHORRANDO HASTA UN <span className="text-highlight-cyan font-bold">90%</span> EN REPUESTOS.
-        </p>
+      {/* Background orbs */}
+      <div className="absolute top-[-15%] left-[-5%] w-[50%] h-[50%] bg-cyan-500/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[45%] h-[45%] bg-blue-900/30 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-[40%] left-[60%] w-[30%] h-[30%] bg-yellow-400/5 rounded-full blur-[100px] pointer-events-none" />
 
-        <div className="my-10 flex flex-col md:flex-row items-center justify-center gap-4 text-sm md:text-base font-bold text-gray-400 uppercase tracking-widest bg-white/5 py-3 px-8 rounded-full border border-white/10 backdrop-blur-sm w-max mx-auto shadow-lg">
-          <p>SERVICIO CURIER PUERTA/PUERTA A NIVEL NACIONAL ASEGURADO</p>
+      <div className="max-w-5xl w-full relative z-10">
+
+        {/* Status pill */}
+        <div className="flex justify-center mb-8">
+          <span className="status-pill">
+            <span className="w-2 h-2 rounded-full bg-[var(--color-accent-green)] animate-pulse" />
+            COURIER GRATUITO · ECUADOR NACIONAL · SIN SALIR DEL CONSULTORIO
+          </span>
         </div>
 
-        <div className="mb-14 relative w-full max-w-4xl mx-auto pt-[56.25%] bg-black rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-white/10 overflow-hidden group transition-transform duration-500 hover:scale-[1.02]">
+        {/* Main headline */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold leading-[1.1] tracking-tight text-white uppercase drop-shadow-2xl mb-6">
+          TU PIEZA DE MANO <span className="text-highlight">NO SUJETA LAS FRESAS, CABECEAN O NO TIENE FUERZA</span>
+        </h1>
+
+        {/* Sub-headline */}
+        <p className="mt-4 text-xl md:text-2xl text-gray-300 font-sans leading-relaxed max-w-3xl mx-auto font-medium">
+          La reparamos y te la devolvemos — <span className="text-highlight-cyan font-bold">sin que salgas de tu consultorio</span>.<br/>
+          Presupuesto gratuito. Ahorra hasta un <span className="text-highlight-green font-extrabold">90%</span> vs reposición.
+        </p>
+
+        {/* Trust strip */}
+        <div className="my-10 flex flex-wrap items-center justify-center gap-3 text-xs md:text-sm font-bold text-gray-300 uppercase tracking-widest">
+          {["✔ Todas las marcas y modelos", "✔ Servicio asegurado", "✔ +25 años de experiencia"].map((item, i) => (
+            <span key={i} className="glass-card px-5 py-2 rounded-full border-glow">
+              {item}
+            </span>
+          ))}
+        </div>
+
+        {/* Video embed */}
+        <div className="mb-14 relative w-full max-w-4xl mx-auto pt-[56.25%] bg-black rounded-2xl shadow-[0_0_60px_rgba(0,0,0,0.6)] border border-white/10 overflow-hidden group transition-transform duration-500 hover:scale-[1.01] animate-pulse-glow">
           {!isPlaying ? (
-            <div 
-              className="absolute inset-0 w-full h-full cursor-pointer flex flex-col items-center justify-center z-10 bg-black/50 hover:bg-black/30 transition-all duration-300 backdrop-blur-[2px]"
+            <div
+              className="absolute inset-0 w-full h-full cursor-pointer flex flex-col items-center justify-center z-10 bg-black/40 hover:bg-black/20 transition-all duration-300"
               onClick={() => setIsPlaying(true)}
             >
-              <img 
-                src="https://img.youtube.com/vi/Hv8_lFwsaQs/maxresdefault.jpg" 
-                alt="Video Thumbnail" 
+              <img
+                src="https://img.youtube.com/vi/Hv8_lFwsaQs/maxresdefault.jpg"
+                alt="Video Thumbnail"
                 className="absolute inset-0 w-full h-full object-cover -z-10 scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F24]/90 via-transparent to-[#0A0F24]/50 -z-10"></div>
-              
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050D1F]/90 via-transparent to-[#050D1F]/40 -z-10" />
+
               <div className="relative group-hover:scale-110 transition-transform duration-300">
-                <div className="absolute inset-0 bg-[var(--color-accent-yellow)] rounded-full blur-xl opacity-60 animate-pulse"></div>
-                <div className="relative bg-[var(--color-accent-yellow)] text-[#0A0F24] rounded-full p-6 shadow-2xl">
+                <div className="absolute inset-0 bg-[var(--color-accent-yellow)] rounded-full blur-2xl opacity-50 animate-pulse" />
+                <div className="relative bg-[var(--color-accent-yellow)] text-[#050D1F] rounded-full p-6 shadow-2xl">
                   <svg className="w-10 h-10 ml-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z" />
                   </svg>
                 </div>
               </div>
+              <p className="mt-5 text-white/80 font-semibold text-sm tracking-widest uppercase">Ver cómo funciona</p>
             </div>
           ) : (
             <iframe
@@ -54,16 +74,18 @@ export default function HeroSection() {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-            ></iframe>
+            />
           )}
         </div>
 
-        <a 
+        {/* CTA */}
+        <a
           href="#booking"
-          className="btn-primary text-lg md:text-xl px-12 py-5 shadow-[0_0_30px_rgba(253,243,84,0.3)]"
+          className="btn-primary text-lg md:text-xl px-12 py-5"
         >
-          SOLICITAR PRESUPUESTO GRATUITO
+          🚚 SOLICITAR RECOLECCIÓN GRATUITA
         </a>
+        <p className="mt-4 text-gray-500 text-sm tracking-wide">Sin costo · Sin compromiso · Respondemos en menos de 24h</p>
       </div>
     </section>
   );

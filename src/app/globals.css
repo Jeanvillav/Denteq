@@ -3,16 +3,23 @@
 @theme {
   --font-sans: var(--font-inter);
   --font-serif: var(--font-outfit);
-  
-  --color-primary-dark: #0A0F24;
-  --color-primary-dark-gradient-start: #0B1330;
-  --color-primary-dark-gradient-end: #050814;
-  
-  --color-accent-yellow: #FDF354;
+
+  /* Deep navy — precisión, tecnología, confianza médica */
+  --color-primary-dark: #050D1F;
+  --color-primary-dark-gradient-start: #0A1832;
+  --color-primary-dark-gradient-end: #020810;
+
+  /* Amarillo dorado — urgencia, energía, altísimo contraste */
+  --color-accent-yellow: #F7E93A;
+  /* Turquesa médico — salud, tecnología, limpieza */
+  --color-accent-cyan: #00CFDE;
+  /* Verde éxito */
+  --color-accent-green: #00D68F;
   --color-accent-red: #FF3B30;
-  --color-accent-cyan: #00F2FE;
-  
-  --color-light-bg: #F4F6F9;
+
+  --color-light-bg: #EEF3FA;
+  --color-mid-bg: #E2EAF4;
+  --color-text-muted: #6B7A99;
 }
 
 @layer base {
@@ -31,87 +38,99 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ─── Highlights ──────────────────────────────────────────── */
 .text-highlight {
   color: var(--color-accent-yellow);
-  text-shadow: 0 0 15px rgba(253, 243, 84, 0.4);
+  text-shadow: 0 0 22px rgba(247, 233, 58, 0.55);
 }
 
 .text-highlight-cyan {
   color: var(--color-accent-cyan);
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+  text-shadow: 0 0 22px rgba(0, 207, 222, 0.55);
 }
 
+.text-highlight-green {
+  color: var(--color-accent-green);
+  text-shadow: 0 0 18px rgba(0, 214, 143, 0.5);
+}
+
+/* ─── Gradiente de texto ───────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent-cyan) 0%, var(--color-accent-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Fondos ───────────────────────────────────────────────── */
 .bg-hero {
-  background: radial-gradient(circle at top right, var(--color-primary-dark-gradient-start) 0%, var(--color-primary-dark-gradient-end) 100%);
+  background:
+    radial-gradient(ellipse 90% 70% at 15% -15%, rgba(0, 207, 222, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 60% at 85% 110%, rgba(247, 233, 58, 0.07) 0%, transparent 55%),
+    linear-gradient(170deg, var(--color-primary-dark-gradient-start) 0%, var(--color-primary-dark-gradient-end) 100%);
 }
 
+/* ─── Tarjetas ─────────────────────────────────────────────── */
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.07);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 207, 222, 0.18);
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.09);
 }
 
+/* ─── Botón principal ──────────────────────────────────────── */
 .btn-primary {
-  @apply bg-[var(--color-accent-yellow)] text-[#0A0F24] px-10 py-4 uppercase tracking-widest transition-all duration-300 font-bold font-serif rounded-xl border border-transparent hover:scale-105 shadow-[0_0_20px_rgba(253,243,84,0.4)] hover:shadow-[0_0_30px_rgba(253,243,84,0.6)] inline-block text-center cursor-pointer;
+  @apply bg-[var(--color-accent-yellow)] text-[#050D1F] px-10 py-4 uppercase tracking-widest transition-all duration-300 font-extrabold font-serif rounded-xl border-2 border-[rgba(247,233,58,0.0)] hover:scale-105 hover:brightness-110 shadow-[0_4px_28px_rgba(247,233,58,0.50)] hover:shadow-[0_6px_40px_rgba(247,233,58,0.70)] inline-block text-center cursor-pointer;
 }
 
-/* React Calendar Overrides for Modern Booking */
-.react-calendar {
-  width: 100% !important;
-  max-width: 400px;
-  background: rgba(255,255,255,0.95);
-  border: none !important;
-  font-family: inherit !important;
-  color: #0A0F24;
-  padding: 16px;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+/* ─── Borde brillante ──────────────────────────────────────── */
+.border-glow {
+  border: 1px solid rgba(0, 207, 222, 0.35);
+  box-shadow: 0 0 24px rgba(0, 207, 222, 0.12), inset 0 0 24px rgba(0, 207, 222, 0.04);
 }
 
-.react-calendar__navigation button {
-  color: #0A0F24 !important;
-  min-width: 44px;
-  background: none;
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 8px;
-}
-.react-calendar__navigation button:enabled:hover,
-.react-calendar__navigation button:enabled:focus {
-  background-color: #F4F6F9 !important;
-  border-radius: 8px;
-}
-.react-calendar__month-view__weekdays {
-  text-transform: uppercase;
+/* ─── Pill de estado ───────────────────────────────────────── */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 214, 143, 0.10);
+  border: 1px solid rgba(0, 214, 143, 0.30);
+  color: var(--color-accent-green);
+  font-size: 0.7rem;
   font-weight: 700;
-  font-size: 0.8em;
-  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
 }
-.react-calendar__tile {
-  padding: 14px 10px !important;
-  font-weight: 600;
+
+/* ─── Línea divisora ───────────────────────────────────────── */
+.divider-cyan {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-cyan), transparent);
+  opacity: 0.3;
 }
-.react-calendar__tile:enabled:hover,
-.react-calendar__tile:enabled:focus {
-  background-color: #F4F6F9 !important;
-  color: #0A0F24;
-  border-radius: 12px;
+
+/* ─── Animaciones ──────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
-.react-calendar__tile--now {
-  background: transparent !important;
-  border: 2px solid #00F2FE !important;
-  color: #0A0F24 !important;
-  border-radius: 12px;
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 207, 222, 0.3); }
+  50% { box-shadow: 0 0 45px rgba(0, 207, 222, 0.65); }
 }
-.react-calendar__tile--active {
-  background: #0A0F24 !important;
-  color: white !important;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(10, 15, 36, 0.4);
-}
-.react-calendar__tile:disabled {
-  background-color: transparent !important;
-  color: #d1d5db !important;
-}
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
