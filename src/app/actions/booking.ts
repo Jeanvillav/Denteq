@@ -49,7 +49,7 @@ export async function submitBooking(data: any) {
 
     if (insertError) {
       console.error("Supabase insert error:", insertError);
-      return { success: false, error: "Error de base de datos. Por favor, asegúrate de haber actualizado las columnas en Supabase." };
+      return { success: false, error: "Error BD: " + insertError.message + " | Detalles: " + JSON.stringify(insertError) };
     }
 
     // Enviar correos
