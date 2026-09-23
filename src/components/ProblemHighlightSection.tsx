@@ -1,41 +1,58 @@
 export default function ProblemHighlightSection() {
+  const problems = [
+    { bold: "Perdió tiempo", rest: " buscando quién tenía el repuesto." },
+    { bold: "Intentó reparar", rest: " y no quedaron bien." },
+    { bold: "No encontró solución", rest: " y terminó comprando una nueva." },
+  ];
+
   return (
-    <section className="w-full bg-[#F4F6F9] px-4 py-24 flex flex-col items-center text-center">
-      <div className="max-w-4xl w-full">
-        <h2 className="text-3xl md:text-4xl font-serif font-extrabold text-[var(--color-primary-dark)] uppercase tracking-tight mb-6">
-          CLIENTES ME CUENTAN QUE HAN INTENTADO CAMBIAR REPUESTOS O REPARAR, <span className="text-red-600">PERO LOS PROBLEMAS PERSISTEN...</span>
+    <section
+      className="w-full bg-[var(--color-primary-dark)] px-4 py-20 flex flex-col items-center text-center relative overflow-hidden"
+      aria-label="Problemas comunes con piezas de mano"
+    >
+      {/* Glow rojo sutil arriba */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[1px] bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50" aria-hidden="true" />
+      <div className="absolute top-[-5%] left-[20%] w-[40%] h-[40%] bg-red-900/20 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+
+      <div className="max-w-2xl w-full relative z-10">
+        {/* Eyebrow */}
+        <p className="text-red-400 font-extrabold uppercase tracking-[0.2em] text-xs mb-4">
+          ¿Ya has vivido esto?
+        </p>
+
+        <h2 className="text-3xl md:text-4xl font-serif font-extrabold text-white uppercase tracking-tight mb-4 leading-tight">
+          Clientes me cuentan que han intentado cambiar repuestos o reparar,{" "}
+          <span className="text-red-400">pero los problemas persisten...</span>
         </h2>
-        
-        <p className="text-xl md:text-2xl text-gray-500 font-medium mb-12">
+
+        <p className="text-lg text-gray-400 font-medium mb-10">
           ¿Usted ya ha experimentado esto?
         </p>
 
-        <div className="flex flex-col gap-6 text-left max-w-2xl mx-auto mb-16">
-          <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-md transition-shadow">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
-              <span className="text-red-600 font-bold text-xl">✗</span>
+        {/* Problem cards — fondo ligeramente más claro sobre oscuro */}
+        <div className="flex flex-col gap-4 text-left mb-10" role="list">
+          {problems.map((p, i) => (
+            <div
+              key={i}
+              role="listitem"
+              className="flex items-start gap-4 p-5 bg-white/5 border border-red-500/20 rounded-2xl hover:border-red-400/40 hover:bg-white/8 transition-all duration-300"
+            >
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-red-500/15 border border-red-500/30 flex items-center justify-center" aria-hidden="true">
+                <span className="text-red-400 font-bold text-base">✗</span>
+              </div>
+              <p className="text-base text-gray-200 pt-1">
+                <span className="font-extrabold text-white">{p.bold}</span>
+                {p.rest}
+              </p>
             </div>
-            <p className="text-lg text-gray-700 pt-1"><span className="font-bold text-gray-900">Perdido tiempo</span> buscando quién tenía el repuesto.</p>
-          </div>
-          
-          <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-md transition-shadow">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
-              <span className="text-red-600 font-bold text-xl">✗</span>
-            </div>
-            <p className="text-lg text-gray-700 pt-1"><span className="font-bold text-gray-900">Intentó reparar</span> y no quedaron bien.</p>
-          </div>
-          
-          <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-red-100 hover:shadow-md transition-shadow">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
-              <span className="text-red-600 font-bold text-xl">✗</span>
-            </div>
-            <p className="text-lg text-gray-700 pt-1"><span className="font-bold text-gray-900">No encontró solución</span> y terminó comprando una nueva.</p>
-          </div>
+          ))}
         </div>
 
-        <div className="bg-red-50 border-l-8 border-red-600 p-8 rounded-r-2xl shadow-lg inline-block w-full max-w-2xl transform transition-transform hover:-translate-y-1">
-          <p className="text-2xl md:text-3xl font-extrabold text-red-700 uppercase tracking-wide">
-            Perdió tiempo y dinero... <span className="text-red-500">sin resultados.</span>
+        {/* Resultado — banner de impacto */}
+        <div className="bg-red-500/10 border border-red-500/30 rounded-2xl px-6 py-5" role="alert">
+          <p className="text-2xl md:text-3xl font-extrabold text-red-400 uppercase tracking-wide leading-tight">
+            Perdió tiempo y dinero…{" "}
+            <span className="text-white">sin resultados.</span>
           </p>
         </div>
       </div>
