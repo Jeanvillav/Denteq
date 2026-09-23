@@ -110,3 +110,23 @@ export async function submitBooking(data: any) {
     return { success: false, error: err.message || "Unknown error occurred" };
   }
 }
+
+// -----------------------------------------------------------------------------
+// DUMMY FUNCTIONS TO PREVENT BUILD ERRORS ON DEPRECATED PAGES
+// -----------------------------------------------------------------------------
+
+export async function getAvailableSlots(dateString: string) {
+  return [];
+}
+
+export async function getBookingById(id: string) {
+  return { success: false, error: "Not supported" };
+}
+
+export async function cancelBooking(id: string) {
+  return { success: false, error: "Not supported" };
+}
+
+export async function rescheduleBooking(id: string, newMeetingTime: string) {
+  return { success: false, error: "Not supported" };
+}

@@ -137,21 +137,11 @@ export default function BookingSection() {
                         defaultCountry="EC"
                         value={value}
                         onChange={onChange}
-                        className="w-full p-3 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 bg-gray-50 text-gray-800"
+                        className="w-full p-3 border border-gray-300 rounded-lg focus-within:ring-2 focus-within:ring-blue-500 bg-gray-50 text-gray-800 [&_input]:w-full [&_input]:bg-transparent [&_input]:outline-none [&_input]:ml-2 [&_input]:text-gray-800 [&_input]:border-none"
                       />
                     )}
                   />
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
-                  <style jsx global>{\`
-                    .PhoneInputInput {
-                      border: none;
-                      outline: none;
-                      background: transparent;
-                      margin-left: 10px;
-                      width: 100%;
-                      color: #1f2937;
-                    }
-                  \`}</style>
                 </div>
               </div>
 
