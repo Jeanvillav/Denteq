@@ -10,7 +10,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[var(--background)] flex flex-col items-center w-full overflow-hidden">
+    <main className="min-h-screen bg-[var(--background)] flex flex-col items-center w-full overflow-x-hidden">
       <StickyHeader />
       
       {/* Hero always visible immediately */}
