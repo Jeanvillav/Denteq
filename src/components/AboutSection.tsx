@@ -52,26 +52,26 @@ export default function AboutSection() {
             Con formación especializada, años de experiencia en campo y una visión enfocada en resultados, nuestra misión es ayudar a los profesionales de la odontología a mantener su equipamiento clínico en óptimas condiciones, evitando pérdidas de tiempo y dinero, y asegurando que cada consulta funcione con la máxima eficiencia.
           </p>
           <p className="font-bold text-[var(--color-primary-dark)] pt-4">
-            📅 Agenda una llamada conmigo o con alguien de mi equipo.
+            🚚 Solicita la recolección gratuita de tus piezas.
           </p>
           <p>
-            Te explicaremos exactamente cómo este enfoque puede funcionar en tu clínica dental.
+            No tienes que salir de tu consultorio. Nosotros nos encargamos de todo.
           </p>
           <div className="bg-[var(--color-light-bg)] border-l-4 border-[var(--color-accent-cyan)] p-6 rounded-r-xl my-8 shadow-sm">
             <p className="text-gray-800 font-medium">
-              Esta llamada no es una venta agresiva. Solo busca darte la información que necesitas para decidir con confianza:
+              El diagnóstico y presupuesto inicial no tienen ningún compromiso. Te daremos todas las opciones para que puedas decidir con confianza:
             </p>
             <div className="mt-4 font-bold text-xl text-center md:text-left">
-              <p>✅ Sí</p>
+              <p>✅ Reparamos</p>
               <p className="my-1">o</p>
-              <p>❌ No</p>
+              <p>❌ Me las devuelven</p>
             </div>
           </div>
           <p className="font-bold text-[var(--color-accent-yellow)] bg-[#0A0F24] inline-block px-4 py-2 rounded">
-            Haga click en el botón abajo...
+            Haz click en el botón de abajo...
           </p>
           <p className="font-bold underline decoration-[var(--color-accent-cyan)] underline-offset-4">
-            Reserve la fecha y hora que más le convenga.
+            Llena tus datos para enviar al courier.
           </p>
           <p className="font-bold text-2xl text-[var(--color-primary-dark)]">
             ¡Hablamos pronto! 👇
@@ -82,7 +82,7 @@ export default function AboutSection() {
               href="#booking"
               className="btn-primary"
             >
-              Agenda Llamada
+              ENVIAR MIS PIEZAS
             </a>
           </div>
         </div>

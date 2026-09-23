@@ -62,7 +62,7 @@ export default function HeroSection() {
           href="#booking"
           className="btn-primary text-lg md:text-xl px-12 py-5 shadow-[0_0_30px_rgba(253,243,84,0.3)]"
         >
-          AGENDAR LLAMADA
+          SOLICITAR PRESUPUESTO GRATUITO
         </a>
       </div>
     </section>

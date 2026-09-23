@@ -36,8 +36,11 @@ export default function StickyHeader() {
         
         {/* Booking CTA for Header */}
         <div className="flex items-center gap-4">
-          <a href="#booking" className="inline-block bg-[var(--color-accent-yellow)] text-[#0A0F24] px-4 py-2 md:px-6 md:py-3 text-xs md:text-sm font-bold uppercase tracking-wider rounded-lg hover:scale-105 transition-transform shadow-[0_0_15px_rgba(253,243,84,0.3)]">
-            AGENDAR LLAMADA
+          <a 
+            href="#booking"
+            className="hidden md:inline-block btn-primary px-6 py-2.5 text-sm"
+          >
+            ENVIAR MIS PIEZAS
           </a>
         </div>
       </div>
