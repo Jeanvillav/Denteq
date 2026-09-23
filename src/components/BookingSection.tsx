@@ -246,7 +246,7 @@ export default function BookingSection() {
               {errors.termsAccepted && <p className="text-red-500 text-xs">{errors.termsAccepted.message}</p>}
 
               {submitMessage && (
-                <div className={\`p-4 rounded-lg font-bold text-center \${submitMessage.type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}\`}>
+                <div className={`p-4 rounded-lg font-bold text-center ${submitMessage.type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
                   <p>{submitMessage.text}</p>
                 </div>
               )}
