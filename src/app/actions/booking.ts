@@ -38,6 +38,7 @@ export async function submitBooking(data: any) {
           house_number: data.houseNumber,
           business_hours: data.businessHours,
           pickup_date: data.pickupDate,
+          meeting_time: new Date().toISOString(), // Dummy para evitar error si la columna era NOT NULL
           question: data.question || null,
           language: data.language || 'es',
           status: 'pending'
