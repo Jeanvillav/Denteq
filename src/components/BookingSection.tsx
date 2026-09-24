@@ -23,6 +23,7 @@ const pickupSchema = z.object({
   closeTime: z.string().min(1, "Cierre requerido"),
   pickupDate: z.string().min(2, "Por favor selecciona un día de recolección"),
   question: z.string().min(2, "Por favor detalla el problema o las piezas"),
+  botField: z.string().optional(),
   termsAccepted: z.literal(true, {
     message: "Debes aceptar los términos y condiciones",
   }),
@@ -107,6 +108,11 @@ export default function BookingSection() {
           {isMounted && (
             <form className="w-full text-left space-y-5" onSubmit={handleSubmit(onSubmit)} noValidate>
               
+              {/* Honeypot field for bot protection */}
+              <div className="hidden" aria-hidden="true">
+                <input type="text" {...register("botField")} tabIndex={-1} autoComplete="off" />
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="firstName" className="block text-sm font-bold text-gray-700 mb-1">Nombre *</label>

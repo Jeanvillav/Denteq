@@ -13,6 +13,11 @@ const transporter = nodemailer.createTransport({
 
 export async function submitBooking(data: any) {
   try {
+    if (data.botField) {
+      console.log("Bot detected via honeypot, ignoring submission.");
+      return { success: true };
+    }
+
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
     const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
     
