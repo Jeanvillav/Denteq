@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import CookieBanner from "@/components/CookieBanner";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -60,6 +61,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         {children}
+        <CookieBanner />
         <Analytics />
       </body>
     </html>

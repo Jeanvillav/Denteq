@@ -22,13 +22,24 @@ export default function Footer() {
         denteq.ec@gmail.com
       </a>
 
+      {/* Legal Links */}
+      <div className="flex gap-4 text-xs font-medium text-gray-500">
+        <Link href="/privacy" className="hover:text-[var(--color-accent-cyan)] transition-colors">
+          Política de Privacidad
+        </Link>
+        <span>|</span>
+        <Link href="/terms" className="hover:text-[var(--color-accent-cyan)] transition-colors">
+          Términos y Condiciones
+        </Link>
+      </div>
+
       {/* Divider */}
       <div className="w-32 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" aria-hidden="true" />
 
       {/* Copyright */}
       <Link
-        href="https://denteq-ec.vercel.app/es"
-        className="text-gray-500 text-xs tracking-widest uppercase hover:text-gray-400 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent-cyan)] rounded"
+        href="https://denteq-ec.vercel.app/"
+        className="text-gray-600 text-xs tracking-widest uppercase hover:text-gray-400 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent-cyan)] rounded"
         aria-label="Sitio oficial de Denteq"
       >
         © 2026 Denteq — Todos los derechos reservados
