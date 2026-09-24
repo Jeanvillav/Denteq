@@ -31,9 +31,11 @@ export default function StickyHeader() {
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         {/* Logo Section - Always visible */}
         <div className="flex items-center gap-4 text-white">
-          <div className={`relative transition-all duration-500 ${isScrolled ? "w-32 md:w-40 h-10" : "w-40 md:w-56 h-12 md:h-16"}`}>
-            <Image src="/LogoDenteq.jpeg" alt="Denteq Logo" fill className="object-contain object-left" priority />
-          </div>
+          <a href="/" className="cursor-pointer" aria-label="Volver al inicio">
+            <div className={`relative transition-all duration-500 ${isScrolled ? "w-32 md:w-40 h-10" : "w-40 md:w-56 h-12 md:h-16"}`}>
+              <Image src="/LogoDenteq.jpeg" alt="Denteq Logo" fill className="object-contain object-left" priority />
+            </div>
+          </a>
         </div>
         
         {/* Booking CTA - Appears only when scrolled */}
