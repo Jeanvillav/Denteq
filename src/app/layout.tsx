@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description: "Servicio de reparación de piezas de mano y micromotores dentales. Servicio courier puerta a puerta asegurado en todo Ecuador. Presupuesto sin compromiso.",
   keywords: ["denteq", "reparación piezas de mano", "odontología ecuador", "ingeniería dental", "mantenimiento equipos dentales", "micromotores dentales ecuador", "repuestos dentales", "kevin easter"],
   authors: [{ name: "Kevin Easter" }],
+  verification: {
+    google: "tICJmiSz3oiI2g7CWpLUjoO7HEHu1RzQ7ffIx6c2M2c",
+  },
   icons: {
     icon: "/LogoDenteq.jpeg",
     apple: "/LogoDenteq.jpeg",
