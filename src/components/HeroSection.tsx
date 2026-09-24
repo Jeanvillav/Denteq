@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function HeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -59,9 +60,12 @@ export default function HeroSection() {
               tabIndex={0}
               onKeyDown={(e) => e.key === 'Enter' && setIsPlaying(true)}
             >
-              <img
+              <Image
                 src="https://img.youtube.com/vi/Hv8_lFwsaQs/maxresdefault.jpg"
                 alt="Vista previa del video de Denteq"
+                fill
+                quality={85}
+                priority
                 className="absolute inset-0 w-full h-full object-cover -z-10 scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050D1F]/90 via-transparent to-[#050D1F]/40 -z-10" aria-hidden="true" />
