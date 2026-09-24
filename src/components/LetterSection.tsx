@@ -103,7 +103,7 @@ export default function LetterSection() {
           <p className="font-bold text-xl">¡Hablamos pronto!</p>
 
           <a
-            href="#booking"
+            href="/#booking"
             className="btn-primary w-full block text-center text-base py-5 mt-2"
             aria-label="Ir al formulario de solicitud de recolección"
           >

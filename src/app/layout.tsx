@@ -17,6 +17,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://denteq-ec.vercel.app"),
   title: "Denteq | Reparación de Piezas de Mano Dentales en Ecuador",
   description: "Servicio de reparación de piezas de mano y micromotores dentales. Servicio courier puerta a puerta asegurado en todo Ecuador. Presupuesto sin compromiso.",
   keywords: ["denteq", "reparación piezas de mano", "odontología ecuador", "ingeniería dental", "mantenimiento equipos dentales", "micromotores dentales ecuador", "repuestos dentales", "kevin easter"],

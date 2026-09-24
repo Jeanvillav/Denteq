@@ -93,7 +93,7 @@ export default function HeroSection() {
 
         {/* CTA principal */}
         <a
-          href="#booking"
+          href="/#booking"
           className="btn-primary text-base md:text-lg w-full block text-center px-8 py-5"
           aria-label="Ir al formulario de recolección gratuita"
         >

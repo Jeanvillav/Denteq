@@ -125,7 +125,7 @@ export default function AboutSection() {
           </p>
 
           <a
-            href="#booking"
+            href="/#booking"
             className="btn-primary w-full block text-center text-base py-5"
             aria-label="Ir al formulario de envío de piezas"
           >
