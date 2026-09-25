@@ -94,47 +94,6 @@ export default function AboutSection() {
             Con formación especializada, años de experiencia en campo y una visión enfocada en resultados, nuestra misión es ayudar a los profesionales de la odontología a mantener su equipamiento clínico en óptimas condiciones, evitando pérdidas de tiempo y dinero, y asegurando que cada consulta funcione con la máxima eficiencia.
           </p>
 
-          <p className="font-bold text-[var(--color-primary-dark)] mt-8">
-            🚚 Solicita la recolección gratuita de tus piezas.
-          </p>
-          <p className="text-sm text-[var(--color-primary-dark)] font-medium">No tienes que salir de tu consultorio. Nosotros nos encargamos de todo.</p>
-
-          {/* === Caja de decisión mejorada === */}
-          <div className="bg-[var(--color-light-bg)] border border-[var(--color-accent-cyan)]/40 rounded-2xl p-5 shadow-sm" role="region" aria-label="Sin venta agresiva — decide con confianza">
-            <p className="text-[var(--color-primary-dark)] font-bold text-sm mb-4 text-center">
-              Este proceso <strong>no es una venta agresiva.</strong><br />
-              Solo busca darle la información que necesita para <strong>decidir con confianza:</strong>
-            </p>
-            <div className="flex gap-3">
-              <div className="flex-1 bg-white rounded-xl p-4 text-center shadow-sm border-2 border-green-400">
-                <span className="text-3xl block mb-1" aria-hidden="true">✅</span>
-                <span className="font-extrabold text-sm text-[var(--color-primary-dark)]">Sí</span>
-              </div>
-              <div className="flex items-center text-[var(--color-primary-dark)] text-sm font-extrabold">o</div>
-              <div className="flex-1 bg-white rounded-xl p-4 text-center shadow-sm border-2 border-red-400">
-                <span className="text-3xl block mb-1" aria-hidden="true">❌</span>
-                <span className="font-extrabold text-sm text-[var(--color-primary-dark)]">No</span>
-              </div>
-            </div>
-          </div>
-
-          <p className="font-bold text-base text-[var(--color-primary-dark)] text-center">
-            Haga click en el botón de abajo…
-          </p>
-          <p className="font-semibold underline decoration-[var(--color-accent-cyan)] underline-offset-4 text-center text-sm">
-            Llena tus datos para enviar al courier.
-          </p>
-          <p className="font-extrabold text-xl text-[var(--color-primary-dark)] text-center">
-            ¡Hablamos pronto! 👇
-          </p>
-
-          <a
-            href="/#booking"
-            className="btn-primary w-full block text-center text-base py-5"
-            aria-label="Ir al formulario de envío de piezas"
-          >
-            🚚 ENVIAR MIS PIEZAS AHORA
-          </a>
         </div>
       </div>
     </section>

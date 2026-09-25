@@ -1,28 +1,13 @@
 export default function LetterSection() {
-  const benefits = [
-    { bold: "Ya no tendrá que preocuparse cuando sus piezas de mano no sujeten bien las fresas." },
-    { bold: "Ya no tendrá que preocuparse cuando sus turbinas no tengan fuerza de tallado." },
-    { bold: "Ya no tendrá que preocuparse por ruidos extraños en sus piezas." },
-    { bold: "Ya no tendrá que preocuparse cuando sus piezas estén bloqueadas o cabeceen." },
-  ];
-
   return (
     <section className="w-full bg-[var(--color-primary-dark)] px-4 py-16 flex flex-col items-center" aria-label="La solución Denteq">
       <div className="max-w-2xl w-full space-y-12 text-base md:text-lg leading-relaxed">
-
-        {/* Bloque: La solución es que usted */}
-        <div className="glass-card rounded-2xl p-6 space-y-4">
-          <h2 className="text-2xl md:text-3xl font-serif font-extrabold text-[var(--color-accent-yellow)] text-center">
-            La solución es que usted:
+        {/* Encabezado visual para conectar con la sección anterior */}
+        <div className="text-center space-y-3 mb-4">
+          <h2 className="text-3xl md:text-4xl font-serif font-extrabold text-[var(--color-accent-yellow)]">
+            La Solución Definitiva
           </h2>
-          <ul className="space-y-4" role="list">
-            {benefits.map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-white text-sm md:text-base">
-                <span className="text-[var(--color-accent-green)] font-extrabold mt-0.5 flex-shrink-0 text-lg" aria-hidden="true">✓</span>
-                <span className="underline underline-offset-4 decoration-white/30">{item.bold}</span>
-              </li>
-            ))}
-          </ul>
+          <p className="text-gray-300">Conozca cómo transformamos el mantenimiento de su clínica:</p>
         </div>
 
         {/* Infografía 1 */}
