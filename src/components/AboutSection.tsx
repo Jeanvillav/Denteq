@@ -60,6 +60,10 @@ export default function AboutSection() {
             <span className="text-[var(--color-primary-dark)]">Ahorro De Tiempo Y Dinero.</span>
           </h3>
 
+          <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-[var(--color-accent-cyan)]/20 mt-4 mb-6 hover:scale-[1.02] transition-transform duration-500">
+            <img src="/taller_3.jpeg" alt="Repuestos originales y de alta calidad" className="w-full h-auto object-cover" loading="lazy" />
+          </div>
+
           <p className="italic font-bold text-[var(--color-primary-dark)]">Estimado Dr./Dra.:</p>
 
           <p className="underline underline-offset-4 font-bold text-[var(--color-primary-dark)]">
