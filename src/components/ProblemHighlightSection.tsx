@@ -115,31 +115,6 @@ export default function ProblemHighlightSection() {
           </motion.div>
         </motion.div>
 
-        {/* === Galería de Neuromarketing (Paquete + Piezas) === */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col gap-6 md:gap-8 w-full mt-16"
-        >
-          <div className="w-full rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-200 relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent z-10 pointer-events-none" aria-hidden="true" />
-            <img src="/paquete.jpeg" alt="Paquete de recolección courier de Denteq" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out" loading="lazy" />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
-            {['/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg'].map((src, i) => (
-              <div 
-                key={i}
-                className="rounded-2xl overflow-hidden shadow-lg border border-gray-200 group cursor-pointer relative"
-              >
-                <img src={src} alt={`Detalle de repuestos y rodamientos dentales de alta precisión ${i+1}`} className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );
