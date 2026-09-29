@@ -23,22 +23,7 @@ export default function LetterSection() {
         {/* Caja de cierre — CTA */}
         <div className="bg-white rounded-2xl p-6 text-[var(--color-primary-dark)] space-y-5 shadow-xl">
 
-          <p className="text-base md:text-lg font-semibold leading-relaxed">
-            Esta recolección <strong>no es una venta agresiva.</strong><br />
-            Solo busca darle la información que necesita para <strong>decidir con confianza:</strong>
-          </p>
 
-          <div className="flex flex-col gap-3 font-bold text-lg">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl" aria-hidden="true">✅</span>
-              <span>Sí</span>
-            </div>
-            <div className="text-gray-400 font-normal text-sm pl-9">o</div>
-            <div className="flex items-center gap-3">
-              <span className="text-2xl" aria-hidden="true">❌</span>
-              <span>No</span>
-            </div>
-          </div>
 
           <p className="text-[var(--color-accent-yellow)] font-bold text-base" style={{color: '#B45309'}}>
             Haga click en el botón abajo...

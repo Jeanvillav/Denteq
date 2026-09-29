@@ -1,10 +1,4 @@
-"use client";
-
-import { useState } from 'react';
-import Image from 'next/image';
-
 export default function HeroSection() {
-  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <section className="w-full bg-hero px-4 pt-28 pb-20 flex flex-col items-center text-center relative overflow-hidden" aria-label="Sección principal">
@@ -45,51 +39,6 @@ export default function HeroSection() {
           </p>
         </div>
 
-        {/* Video */}
-        <div
-          className="mb-12 relative w-full pt-[56.25%] bg-black rounded-2xl shadow-[0_0_60px_rgba(0,0,0,0.6)] border border-white/10 overflow-hidden group transition-transform duration-500 hover:scale-[1.01]"
-          role="region"
-          aria-label="Video demostrativo"
-        >
-          {!isPlaying ? (
-            <div
-              className="absolute inset-0 w-full h-full cursor-pointer flex flex-col items-center justify-center z-10 bg-black/40 hover:bg-black/20 transition-all duration-300"
-              onClick={() => setIsPlaying(true)}
-              role="button"
-              aria-label="Reproducir video"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === 'Enter' && setIsPlaying(true)}
-            >
-              <Image
-                src="https://img.youtube.com/vi/Hv8_lFwsaQs/maxresdefault.jpg"
-                alt="Vista previa del video de Denteq"
-                fill
-                quality={85}
-                priority
-                className="absolute inset-0 w-full h-full object-cover -z-10 scale-105 group-hover:scale-100 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050D1F]/90 via-transparent to-[#050D1F]/40 -z-10" aria-hidden="true" />
-              <div className="relative group-hover:scale-110 transition-transform duration-300">
-                <div className="absolute inset-0 bg-[var(--color-accent-yellow)] rounded-full blur-2xl opacity-50 animate-pulse" aria-hidden="true" />
-                <div className="relative bg-[var(--color-accent-yellow)] text-[#050D1F] rounded-full p-5 shadow-2xl">
-                  <svg className="w-9 h-9 ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z" />
-                  </svg>
-                </div>
-              </div>
-              <p className="mt-4 text-white/80 font-semibold text-sm tracking-widest uppercase">Ver cómo funciona</p>
-            </div>
-          ) : (
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/Hv8_lFwsaQs?autoplay=1&mute=0&rel=0"
-              title="Denteq — Cómo funciona el servicio de reparación de piezas de mano"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          )}
-        </div>
 
         {/* CTA principal */}
         <a
