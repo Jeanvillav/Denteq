@@ -93,6 +93,28 @@ export default function ProblemHighlightSection() {
               Agenda Llamada
             </a>
           </div>
+
+          {/* === Galería de Neuromarketing (Paquete + Piezas) === */}
+          <div className="mt-14 flex flex-col gap-6 md:gap-8">
+            {/* Imagen principal: Paquete Courier */}
+            <div className="w-full rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 relative group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent z-10 pointer-events-none" aria-hidden="true" />
+              <img src="/paquete.jpeg" alt="Paquete de recolección courier de Denteq" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out" loading="lazy" />
+            </div>
+
+            {/* Grid 3 columnas: Piezas */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-pointer relative">
+                <img src="/piezas1.jpeg" alt="Detalle de repuestos y rodamientos dentales de alta precisión 1" className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-pointer relative">
+                <img src="/piezas2.jpeg" alt="Detalle de repuestos y rodamientos dentales de alta precisión 2" className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-pointer relative">
+                <img src="/piezas3.jpeg" alt="Detalle de repuestos y rodamientos dentales de alta precisión 3" className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
