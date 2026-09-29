@@ -16,9 +16,9 @@ export default function Home() {
       <div className="w-full">
         <HeroSection />
       </div>
-      
+
       <ScrollReveal className="w-full">
-        <ProblemHighlightSection />
+        <AboutSection />
       </ScrollReveal>
       
       <ScrollReveal className="w-full">
@@ -26,7 +26,7 @@ export default function Home() {
       </ScrollReveal>
 
       <ScrollReveal className="w-full">
-        <AboutSection />
+        <ProblemHighlightSection />
       </ScrollReveal>
 
       <ScrollReveal className="w-full">
