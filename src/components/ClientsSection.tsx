@@ -32,9 +32,9 @@ export default function ClientsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-sm md:text-base font-extrabold text-[var(--color-primary-dark)] uppercase tracking-[0.25em] mb-14 px-4"
+          className="text-sm md:text-base font-extrabold text-[var(--color-primary-dark)] uppercase tracking-wider md:tracking-[0.25em] mb-14 px-4 max-w-4xl mx-auto leading-relaxed"
         >
-          Expertos En Las Mejores Marcas
+          Repuestos para todas las marcas y modelos de Piezas de Mano - Micromotores - Contrangulos - Piezas Rectas - Cavitrones - Scalers - Ultrasonidos
         </motion.p>
 
         {/* Marquee container */}
