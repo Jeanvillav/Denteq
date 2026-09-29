@@ -55,6 +55,45 @@ export default function ProblemHighlightSection() {
             <span className="text-white">sin resultados.</span>
           </p>
         </div>
+
+        {/* === Nueva Caja de Solución (basada en imagen) === */}
+        <div className="mt-16 bg-white rounded-3xl p-8 md:p-12 text-left shadow-[0_30px_60px_rgba(0,0,0,0.5)] relative w-full" role="region" aria-label="La solución Denteq">
+          <h3 className="text-3xl md:text-4xl font-extrabold italic text-[#2596be] mb-4">La solución:</h3>
+          <p className="text-xl md:text-2xl font-bold text-black mb-6">Denteq</p>
+          
+          <ul className="space-y-4 text-base md:text-lg italic mb-12 md:pl-6 leading-snug" role="list">
+            <li>
+              <span className="font-bold text-[#2596be]">Servicio puerta a puerta a nivel nacional (Ecuador)</span>
+              <span className="text-gray-800 font-medium"> — comodidad total sin interrumpir su trabajo.</span>
+            </li>
+            <li>
+              <span className="font-bold text-[#2596be]">Repuestos para todas las marcas y modelos en un solo lugar</span>
+              <span className="text-gray-800 font-medium"> — sin necesidad de buscar en distintos proveedores.</span>
+            </li>
+            <li>
+              <span className="font-bold text-[#2596be]">Técnicos certificados</span>
+              <span className="text-gray-800 font-medium"> — confianza y calidad en cada reparación.</span>
+            </li>
+            <li>
+              <span className="font-bold text-[#2596be]">Garantía en repuestos y reparaciones</span>
+              <span className="text-gray-800 font-medium"> — cero riesgo.</span>
+            </li>
+            <li>
+              <span className="font-bold text-[#2596be]">Ahorro de tiempo y dinero </span>
+              <span className="text-gray-800 font-medium">al evitar compras innecesarias o reparaciones fallidas.</span>
+            </li>
+          </ul>
+
+          <div className="flex justify-center">
+            <a
+              href="/#booking"
+              className="bg-[#FFE000] hover:bg-[#FFD000] text-black font-bold py-4 px-12 md:px-16 rounded-md text-lg md:text-xl transition-transform hover:scale-105 duration-300 shadow-md"
+              aria-label="Agenda Llamada"
+            >
+              Agenda Llamada
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
