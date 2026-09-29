@@ -10,23 +10,63 @@ export default function ProblemHighlightSection() {
     >
       <div className="max-w-3xl w-full relative z-10 flex flex-col items-center">
         
-        {/* Imagen de la Diferencia provista por el usuario */}
+        {/* === Sección: Esta Es La Diferencia === */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="w-full flex flex-col items-center text-center mb-20"
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.6 }}
-          className="w-full rounded-2xl overflow-hidden shadow-2xl border border-gray-100 mb-16"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+          }}
         >
-          <img 
-            src="/diferencia.png" 
-            alt="Diferencia entre el método antiguo y la nueva forma con Denteq" 
-            className="w-full h-auto object-contain" 
-            loading="lazy" 
-          />
+          <motion.h2 
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+            className="text-4xl md:text-5xl font-extrabold text-[#11114b] mb-12"
+          >
+            Esta Es La Diferencia:
+          </motion.h2>
+
+          {/* --- A la antigua --- */}
+          <motion.div 
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+            className="w-full text-[#333] space-y-6 text-lg md:text-xl font-medium leading-relaxed mb-16"
+          >
+            <p className="font-bold text-2xl text-black">A la antigua...</p>
+            <p>
+              Clientes me cuentan que han intentado cambiar repuestos o reparar, pero los problemas persisten. Y usted ya ha experimentado esto:
+            </p>
+            <ul className="list-none space-y-2">
+              <li>• Perdió tiempo buscando quién tenía el repuesto</li>
+              <li>• Intentó reparar y no quedaron bien</li>
+              <li>• No encontró solución y terminó comprando una nueva</li>
+            </ul>
+            <p className="pt-2">
+              Perdió tiempo y dinero... sin resultados.
+            </p>
+          </motion.div>
+
+          {/* --- Con la nueva forma --- */}
+          <motion.div 
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
+            className="w-full text-[#333] space-y-6 text-lg md:text-xl font-medium leading-relaxed"
+          >
+            <p className="font-bold text-2xl text-black">Con la nueva forma... todo cambia:</p>
+            <ul className="list-none space-y-4 text-left mx-auto max-w-2xl pl-4">
+              <li>• <span className="font-bold">Servicio puerta a puerta a nivel nacional</span> – comodidad total sin interrumpir su trabajo</li>
+              <li>• <span className="font-bold">Repuestos para todas las marcas y modelos en un solo lugar</span> – sin necesidad de buscar en distintos proveedores</li>
+              <li>• <span className="font-bold">Técnicos certificados</span> – confianza y calidad en cada reparación</li>
+              <li>• <span className="font-bold">Garantía en repuestos y reparaciones</span> – cero riesgo</li>
+              <li>• <span className="font-bold">Ahorro de tiempo y dinero</span> al evitar compras innecesarias o reparaciones fallidas</li>
+            </ul>
+            <p className="pt-4 text-center">
+              Simplificamos todo el proceso para que usted reciba soluciones rápidas, seguras y garantizadas.
+            </p>
+          </motion.div>
         </motion.div>
 
-        {/* === Caja de Solución === */}
+        {/* === Sección: La Solución (Diseño Alternativo) === */}
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +107,7 @@ export default function ProblemHighlightSection() {
           >
             <a
               href="/#booking"
-              className="bg-[#FFE000] text-black font-extrabold py-4 px-12 md:px-16 rounded-md text-lg md:text-xl shadow-[0_10px_20px_rgba(255,224,0,0.3)] transition-colors hover:bg-[#FFD000]"
+              className="bg-[#FFE000] text-black font-extrabold py-5 px-12 md:px-16 rounded-lg text-xl md:text-2xl shadow-[0_15px_30px_rgba(255,224,0,0.4)] transition-colors hover:bg-[#FFD000]"
               aria-label="Agenda Llamada"
             >
               Agenda Llamada
