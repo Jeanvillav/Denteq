@@ -1,7 +1,8 @@
 import StickyHeader from "@/components/StickyHeader";
 import HeroSection from "@/components/HeroSection";
-import ProblemHighlightSection from "@/components/ProblemHighlightSection";
+import RedProblemSection from "@/components/RedProblemSection";
 import ClientsSection from "@/components/ClientsSection";
+import ProblemHighlightSection from "@/components/ProblemHighlightSection";
 import LetterSection from "@/components/LetterSection";
 import AboutSection from "@/components/AboutSection";
 import BookingSection from "@/components/BookingSection";
@@ -18,7 +19,7 @@ export default function Home() {
       </div>
 
       <ScrollReveal className="w-full">
-        <AboutSection />
+        <RedProblemSection />
       </ScrollReveal>
       
       <ScrollReveal className="w-full">
@@ -31,6 +32,10 @@ export default function Home() {
 
       <ScrollReveal className="w-full">
         <LetterSection />
+      </ScrollReveal>
+
+      <ScrollReveal className="w-full">
+        <AboutSection />
       </ScrollReveal>
       
       <ScrollReveal className="w-full">
