@@ -16,6 +16,8 @@
     "@vercel/analytics": "^2.0.1",
     "date-fns": "^4.4.0",
     "date-fns-tz": "^3.2.0",
+    "embla-carousel-auto-scroll": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^13.4.6",
     "jsonwebtoken": "^9.0.3",
     "libphonenumber-js": "^1.13.9",

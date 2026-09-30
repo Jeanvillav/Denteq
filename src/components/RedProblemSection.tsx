@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 export default function RedProblemSection() {
   const problems = [
@@ -10,44 +11,10 @@ export default function RedProblemSection() {
     { bold: "No encontró solución", rest: " y terminó comprando una nueva." },
   ];
 
-  const carouselRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = carouselRef.current;
-    if (!el) return;
-
-    let animationId: number;
-    let isPaused = false;
-
-    const scroll = () => {
-      if (!isPaused && el) {
-        el.scrollLeft += 1.5; // Auto-scroll speed
-        // If scrolled to the end, snap back to start for infinite feel
-        if (el.scrollLeft >= el.scrollWidth - el.clientWidth - 2) {
-          el.scrollLeft = 0;
-        }
-      }
-      animationId = requestAnimationFrame(scroll);
-    };
-
-    animationId = requestAnimationFrame(scroll);
-
-    const pause = () => { isPaused = true; };
-    const resume = () => { isPaused = false; };
-
-    el.addEventListener("mouseenter", pause);
-    el.addEventListener("mouseleave", resume);
-    el.addEventListener("touchstart", pause, { passive: true });
-    el.addEventListener("touchend", resume);
-
-    return () => {
-      cancelAnimationFrame(animationId);
-      el.removeEventListener("mouseenter", pause);
-      el.removeEventListener("mouseleave", resume);
-      el.removeEventListener("touchstart", pause);
-      el.removeEventListener("touchend", resume);
-    };
-  }, []);
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, dragFree: true },
+    [AutoScroll({ playOnInit: true, speed: 1.5, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
 
   return (
     <section
@@ -176,22 +143,21 @@ export default function RedProblemSection() {
               <div className="absolute left-0 top-0 w-6 md:w-12 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
               <div className="absolute right-0 top-0 w-6 md:w-12 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
               
-              <div 
-                ref={carouselRef}
-                className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-4 md:gap-6 px-4 md:px-8 w-full scroll-smooth"
-              >
-                {[
-                  '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg',
-                  '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg',
-                  '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg'
-                ].map((src, i) => (
-                  <div 
-                    key={i}
-                    className="snap-center h-[300px] md:h-[500px] flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border border-gray-100 group relative bg-gray-50 flex items-center justify-center"
-                  >
-                    <img src={src} alt={`Detalle de repuestos dentales`} className="w-auto h-full object-contain transform group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                  </div>
-                ))}
+              <div className="overflow-hidden w-full cursor-grab active:cursor-grabbing px-4 md:px-8" ref={emblaRef}>
+                <div className="flex touch-pan-y gap-4 md:gap-6">
+                  {[
+                    '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg',
+                    '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg',
+                    '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg'
+                  ].map((src, i) => (
+                    <div 
+                      key={i}
+                      className="flex-[0_0_auto] h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-100 group relative bg-gray-50 flex items-center justify-center"
+                    >
+                      <img src={src} alt={`Detalle de repuestos dentales`} className="w-auto h-full object-contain transform group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
