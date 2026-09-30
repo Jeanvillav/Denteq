@@ -66,54 +66,7 @@ export default function ProblemHighlightSection() {
           </motion.div>
         </motion.div>
 
-        {/* === Sección: La Solución (Diseño Alternativo) === */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-white rounded-3xl p-8 md:p-12 text-left shadow-[0_30px_60px_rgba(0,0,0,0.1)] relative w-full border border-gray-100" 
-          role="region" 
-          aria-label="La solución Denteq"
-        >
-          <h3 className="text-4xl md:text-5xl font-extrabold italic text-[#2596be] mb-4">La solución:</h3>
-          <p className="text-2xl md:text-3xl font-bold text-black mb-8">Denteq</p>
-          
-          <ul className="space-y-4 text-lg md:text-xl italic mb-12 leading-relaxed" role="list">
-            {[
-              { bold: "Servicio puerta a puerta a nivel nacional (Ecuador)", rest: " — comodidad total sin interrumpir su trabajo." },
-              { bold: "Repuestos para todas las marcas y modelos en un solo lugar", rest: " — sin necesidad de buscar en distintos proveedores." },
-              { bold: "Técnicos certificados", rest: " — confianza y calidad en cada reparación." },
-              { bold: "Garantía en repuestos y reparaciones", rest: " — cero riesgo." },
-              { bold: "Ahorro de tiempo y dinero", rest: " al evitar compras innecesarias o reparaciones fallidas." }
-            ].map((item, i) => (
-              <motion.li 
-                key={i}
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 * i }}
-              >
-                <span className="font-bold text-[#2596be]">{item.bold}</span>
-                <span className="text-gray-800 font-medium">{item.rest}</span>
-              </motion.li>
-            ))}
-          </ul>
 
-          <motion.div 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex justify-center"
-          >
-            <a
-              href="/#booking"
-              className="bg-[#FFE000] text-black font-extrabold py-5 px-12 md:px-16 rounded-lg text-xl md:text-2xl shadow-[0_15px_30px_rgba(255,224,0,0.4)] transition-colors hover:bg-[#FFD000]"
-              aria-label="Agenda Llamada"
-            >
-              Agenda Llamada
-            </a>
-          </motion.div>
-        </motion.div>
 
       </div>
     </section>
