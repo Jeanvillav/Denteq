@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 const brands = [
   { name: "Kavo", logo: "/marcas/KavoDentalExcellence.jpeg" },
@@ -21,7 +23,12 @@ const brands = [
 ];
 
 export default function ClientsSection() {
-  // Duplicate array for infinite marquee effect
+  const [emblaRef] = useEmblaCarousel(
+    { loop: true, dragFree: true },
+    [AutoScroll({ playOnInit: true, speed: 1.5, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
+
+  // Duplicate array for infinite marquee effect (less critical with loop but good for filling space)
   const marqueeBrands = [...brands, ...brands];
 
   return (
@@ -43,24 +50,26 @@ export default function ClientsSection() {
           <div className="absolute left-0 top-0 w-20 md:w-40 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 w-20 md:w-40 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
           
-          {/* Marquee track */}
-          <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
-            {marqueeBrands.map((b, i) => (
-              <div
-                key={i}
-                className="mx-4 md:mx-6 h-36 w-64 md:h-44 md:w-80 bg-white border border-[var(--color-mid-bg)] rounded-2xl shadow-sm flex flex-shrink-0 items-center justify-center p-6 md:p-8 hover:shadow-xl hover:-translate-y-1 hover:border-[var(--color-accent-cyan)]/40 transition-all duration-300 group"
-              >
-                <div className="relative w-full h-full group-hover:scale-110 transition-transform duration-500 ease-out">
-                  <Image
-                    src={b.logo}
-                    alt={`Logo de la marca ${b.name}`}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 256px, 320px"
-                  />
+          {/* Embla track */}
+          <div className="overflow-hidden w-full cursor-grab active:cursor-grabbing" ref={emblaRef}>
+            <div className="flex touch-pan-y py-4">
+              {marqueeBrands.map((b, i) => (
+                <div
+                  key={i}
+                  className="flex-[0_0_auto] mx-3 md:mx-4 h-36 w-64 md:h-44 md:w-80 bg-white border border-[var(--color-mid-bg)] rounded-2xl shadow-sm flex flex-shrink-0 items-center justify-center p-6 md:p-8 hover:shadow-xl hover:-translate-y-1 hover:border-[var(--color-accent-cyan)]/40 transition-all duration-300 group"
+                >
+                  <div className="relative w-full h-full group-hover:scale-110 transition-transform duration-500 ease-out">
+                    <Image
+                      src={b.logo}
+                      alt={`Logo de la marca ${b.name}`}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 256px, 320px"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
