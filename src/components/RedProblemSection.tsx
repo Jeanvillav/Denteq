@@ -132,19 +132,24 @@ export default function RedProblemSection() {
               <img src="/paquete.jpeg" alt="Paquete de recolección courier de Denteq" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out" loading="lazy" />
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
-              {['/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg'].map((src, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + (i * 0.1) }}
-                  className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-pointer relative"
-                >
-                  <img src={src} alt={`Detalle de repuestos y rodamientos dentales de alta precisión ${i+1}`} className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" />
-                </motion.div>
-              ))}
+            <div className="w-full relative flex overflow-hidden py-4">
+              <div className="absolute left-0 top-0 w-12 md:w-24 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 w-12 md:w-24 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+              
+              <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
+                {[
+                  '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg',
+                  '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg',
+                  '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg'
+                ].map((src, i) => (
+                  <div 
+                    key={i}
+                    className="mx-3 md:mx-4 w-64 md:w-80 h-64 md:h-80 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-pointer relative"
+                  >
+                    <img src={src} alt={`Detalle de repuestos y rodamientos dentales de alta precisión`} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </motion.div>
