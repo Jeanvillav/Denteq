@@ -132,11 +132,11 @@ export default function RedProblemSection() {
               <img src="/paquete.jpeg" alt="Paquete de recolección courier de Denteq" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out" loading="lazy" />
             </motion.div>
 
-            <div className="w-full relative flex overflow-hidden py-4">
-              <div className="absolute left-0 top-0 w-12 md:w-24 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-              <div className="absolute right-0 top-0 w-12 md:w-24 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div className="w-full relative flex overflow-hidden py-4 group/carousel">
+              <div className="absolute left-0 top-0 w-6 md:w-12 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 w-6 md:w-12 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
               
-              <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
+              <div className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-4 md:gap-6 px-4 md:px-8 w-full scroll-smooth">
                 {[
                   '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg',
                   '/piezas1.jpeg', '/piezas2.jpeg', '/piezas3.jpeg',
@@ -144,9 +144,9 @@ export default function RedProblemSection() {
                 ].map((src, i) => (
                   <div 
                     key={i}
-                    className="mx-3 md:mx-4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer relative"
+                    className="snap-center w-[300px] md:w-[500px] h-[300px] md:h-[500px] flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border border-gray-100 group relative"
                   >
-                    <img src={src} alt={`Detalle de repuestos y rodamientos dentales de alta precisión`} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    <img src={src} alt={`Detalle de repuestos y rodamientos dentales`} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   </div>
                 ))}
               </div>
