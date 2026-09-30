@@ -319,7 +319,7 @@ export default function BookingSection() {
                 {/* Shine effect on button */}
                 <div className="absolute top-0 -left-[100%] w-1/2 h-full bg-white/20 skew-x-[-20deg] hover:animate-shine pointer-events-none" />
                 
-                {isSubmitting ? "ENVIANDO..." : (submitMessage?.type === "success" ? "¡SOLICITUD ENVIADA!" : "SOLICITAR RECOLECCIÓN Y PRESUPUESTO")}
+                {isSubmitting ? "ENVIANDO..." : (submitMessage?.type === "success" ? "¡SOLICITUD ENVIADA!" : "🚚 SOLICITAR RECOLECCIÓN GRATUITA")}
               </button>
             </form>
           )}

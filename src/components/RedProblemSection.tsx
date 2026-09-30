@@ -121,9 +121,9 @@ export default function RedProblemSection() {
             <a
               href="/#booking"
               className="bg-[#FFE000] text-black font-extrabold py-5 px-12 md:px-16 rounded-lg text-xl md:text-2xl shadow-[0_15px_30px_rgba(255,224,0,0.4)] transition-colors hover:bg-[#FFD000]"
-              aria-label="Agenda Llamada"
+              aria-label="Solicitar Recolección"
             >
-              Agenda Llamada
+              🚚 SOLICITAR RECOLECCIÓN GRATUITA
             </a>
           </motion.div>
 
