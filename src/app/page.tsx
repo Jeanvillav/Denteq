@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import RedProblemSection from "@/components/RedProblemSection";
 import ClientsSection from "@/components/ClientsSection";
 import ProblemHighlightSection from "@/components/ProblemHighlightSection";
+import ThreeStepsSection from "@/components/ThreeStepsSection";
 import LetterSection from "@/components/LetterSection";
 import AboutSection from "@/components/AboutSection";
 import BookingSection from "@/components/BookingSection";
@@ -28,6 +29,10 @@ export default function Home() {
 
       <ScrollReveal className="w-full">
         <ProblemHighlightSection />
+      </ScrollReveal>
+
+      <ScrollReveal className="w-full">
+        <ThreeStepsSection />
       </ScrollReveal>
 
       <ScrollReveal className="w-full">
