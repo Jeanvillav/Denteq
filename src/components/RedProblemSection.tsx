@@ -126,7 +126,7 @@ export default function RedProblemSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="w-full rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 relative group"
+              className="max-w-xs md:max-w-sm mx-auto rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent z-10 pointer-events-none" aria-hidden="true" />
               <img src="/paquete.jpeg" alt="Paquete de recolección courier de Denteq" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out" loading="lazy" />
@@ -144,9 +144,9 @@ export default function RedProblemSection() {
                 ].map((src, i) => (
                   <div 
                     key={i}
-                    className="mx-3 md:mx-4 w-64 md:w-80 h-64 md:h-80 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-pointer relative"
+                    className="mx-3 md:mx-4 w-[300px] md:w-[500px] h-[300px] md:h-[500px] flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer relative"
                   >
-                    <img src={src} alt={`Detalle de repuestos y rodamientos dentales de alta precisión`} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                    <img src={src} alt={`Detalle de repuestos y rodamientos dentales de alta precisión`} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   </div>
                 ))}
               </div>
