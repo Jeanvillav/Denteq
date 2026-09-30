@@ -29,7 +29,7 @@ export default function RedProblemSection() {
       >
         <motion.p 
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-          className="text-red-400 font-extrabold uppercase tracking-[0.2em] text-xs mb-4"
+          className="text-highlight-cyan font-extrabold uppercase tracking-[0.2em] text-xs mb-4"
         >
           ¿Ya has vivido esto?
         </motion.p>
@@ -39,7 +39,7 @@ export default function RedProblemSection() {
           className="text-3xl md:text-4xl font-serif font-extrabold text-white uppercase tracking-tight mb-4 leading-tight"
         >
           Clientes me cuentan que han intentado cambiar repuestos o reparar,{" "}
-          <span className="text-red-400">pero los problemas persisten...</span>
+          <span className="text-highlight-cyan">pero los problemas persisten...</span>
         </motion.h2>
 
         <motion.p 
