@@ -23,7 +23,7 @@ export default function ProblemHighlightSection() {
         >
           <motion.h2 
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-            className="text-4xl md:text-5xl font-extrabold text-[#11114b] mb-12"
+            className="text-5xl md:text-6xl font-extrabold text-[#11114b] mb-12"
           >
             Esta Es La Diferencia:
           </motion.h2>
@@ -31,9 +31,9 @@ export default function ProblemHighlightSection() {
           {/* --- A la antigua --- */}
           <motion.div 
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-            className="w-full text-[#333] space-y-6 text-lg md:text-xl font-medium leading-relaxed mb-16"
+            className="w-full text-[#333] space-y-6 text-xl md:text-2xl font-medium leading-relaxed mb-16"
           >
-            <p className="font-bold text-2xl text-black">A la antigua...</p>
+            <p className="font-bold text-3xl md:text-4xl text-black">A la antigua...</p>
             <p>
               Clientes me cuentan que han intentado cambiar repuestos o reparar, pero los problemas persisten. Y usted ya ha experimentado esto:
             </p>
@@ -50,9 +50,9 @@ export default function ProblemHighlightSection() {
           {/* --- Con la nueva forma --- */}
           <motion.div 
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-            className="w-full text-[#333] space-y-6 text-lg md:text-xl font-medium leading-relaxed"
+            className="w-full text-[#333] space-y-6 text-xl md:text-2xl font-medium leading-relaxed"
           >
-            <p className="font-bold text-2xl text-black">Con la nueva forma... todo cambia:</p>
+            <p className="font-bold text-3xl md:text-4xl text-black">Con la nueva forma... todo cambia:</p>
             <ul className="list-none space-y-4 text-left mx-auto max-w-2xl pl-4">
               <li>• <span className="font-bold">Servicio puerta a puerta a nivel nacional</span> – comodidad total sin interrumpir su trabajo</li>
               <li>• <span className="font-bold">Repuestos para todas las marcas y modelos en un solo lugar</span> – sin necesidad de buscar en distintos proveedores</li>
@@ -76,10 +76,10 @@ export default function ProblemHighlightSection() {
           role="region" 
           aria-label="La solución Denteq"
         >
-          <h3 className="text-3xl md:text-4xl font-extrabold italic text-[#2596be] mb-4">La solución:</h3>
-          <p className="text-xl md:text-2xl font-bold text-black mb-8">Denteq</p>
+          <h3 className="text-4xl md:text-5xl font-extrabold italic text-[#2596be] mb-4">La solución:</h3>
+          <p className="text-2xl md:text-3xl font-bold text-black mb-8">Denteq</p>
           
-          <ul className="space-y-4 text-base md:text-lg italic mb-12 leading-relaxed" role="list">
+          <ul className="space-y-4 text-lg md:text-xl italic mb-12 leading-relaxed" role="list">
             {[
               { bold: "Servicio puerta a puerta a nivel nacional (Ecuador)", rest: " — comodidad total sin interrumpir su trabajo." },
               { bold: "Repuestos para todas las marcas y modelos en un solo lugar", rest: " — sin necesidad de buscar en distintos proveedores." },

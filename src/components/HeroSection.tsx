@@ -38,7 +38,7 @@ export default function HeroSection() {
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
           }}
-          className="text-4xl md:text-5xl font-serif font-extrabold leading-[1.12] tracking-tight text-white uppercase mb-5"
+          className="text-5xl md:text-6xl font-serif font-extrabold leading-[1.12] tracking-tight text-white uppercase mb-5"
         >
           SOLUCIONAMOS PROBLEMAS DE TUS{' '}
           <span className="text-highlight">PIEZAS DE MANO Y MICROMOTORES DENTALES</span>{' '}
@@ -52,7 +52,7 @@ export default function HeroSection() {
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
           }}
-          className="text-lg md:text-xl text-white font-bold leading-relaxed mb-4"
+          className="text-xl md:text-2xl text-white font-bold leading-relaxed mb-4"
         >
           — Y LO MEJOR,{' '}
           <span className="underline underline-offset-4 decoration-[var(--color-accent-yellow)]">SIN QUE TENGAS QUE SALIR DE TU CONSULTORIO</span>,{' '}
@@ -82,7 +82,7 @@ export default function HeroSection() {
         >
           <a
             href="/#booking"
-            className="btn-primary text-base md:text-lg w-full block text-center px-8 py-5 hover:scale-105 transition-transform duration-300"
+            className="btn-primary text-lg md:text-xl w-full block text-center px-8 py-5 hover:scale-105 transition-transform duration-300 font-extrabold shadow-[0_15px_30px_rgba(255,224,0,0.3)]"
             aria-label="Ir al formulario de recolección gratuita"
           >
             🚚 SOLICITAR RECOLECCIÓN GRATUITA

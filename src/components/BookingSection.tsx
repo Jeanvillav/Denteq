@@ -72,20 +72,20 @@ export default function BookingSection() {
       <div className="absolute bottom-[10%] left-[-5%] w-[40%] h-[40%] bg-[#00D68F]/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
       
       <div className="max-w-4xl w-full text-center relative z-10">
-        <h2 className="text-3xl md:text-5xl font-serif font-extrabold text-[var(--color-accent-yellow)] mb-6 tracking-tight drop-shadow-md uppercase">
+        <h2 className="text-4xl md:text-6xl font-serif font-extrabold text-[var(--color-accent-yellow)] mb-6 tracking-tight drop-shadow-md uppercase">
           Solicita tu recolección gratuita
         </h2>
         
         <div className="text-left max-w-2xl mx-auto space-y-4 mb-12 glass-card p-6 md:p-8 rounded-2xl border border-[var(--color-accent-cyan)]/20 shadow-lg">
           <div className="flex items-start gap-3">
-            <span className="text-[var(--color-accent-cyan)] text-xl font-black mt-0.5" aria-hidden="true">✓</span>
-            <p className="text-base md:text-lg text-gray-300">
+            <span className="text-[var(--color-accent-cyan)] text-2xl font-black mt-0.5" aria-hidden="true">✓</span>
+            <p className="text-lg md:text-xl text-gray-300">
               <strong className="text-white">Servicio Puerta a Puerta:</strong> Vamos hasta tu clínica en todo el Ecuador para recoger tus piezas.
             </p>
           </div>
           <div className="flex items-start gap-3">
-            <span className="text-[var(--color-accent-cyan)] text-xl font-black mt-0.5" aria-hidden="true">✓</span>
-            <p className="text-base md:text-lg text-gray-300">
+            <span className="text-[var(--color-accent-cyan)] text-2xl font-black mt-0.5" aria-hidden="true">✓</span>
+            <p className="text-lg md:text-xl text-gray-300">
               <strong className="text-white">Presupuesto sin compromiso:</strong> Analizamos tus instrumentos y te damos la mejor opción de reparación.
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function BookingSection() {
             <Image src="/LogoDenteq.jpeg" alt="Logo de Denteq" fill className="object-contain" />
           </div>
 
-          <h3 className="text-xl md:text-2xl font-bold mb-8 text-[var(--color-primary-dark)] text-center w-full pb-4 border-b border-gray-100">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-[var(--color-primary-dark)] text-center w-full pb-4 border-b border-gray-100">
             Datos para la Recolección
           </h3>
 
@@ -314,7 +314,7 @@ export default function BookingSection() {
               <button 
                 type="submit" 
                 disabled={isSubmitting || submitMessage?.type === "success"}
-                className="w-full bg-[var(--color-accent-yellow)] text-[#B45309] border border-[#B45309]/20 font-extrabold py-6 rounded-2xl hover:scale-[1.01] hover:shadow-[0_10px_25px_rgba(253,243,84,0.3)] transition-all mt-8 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wide text-lg relative overflow-hidden"
+                className="w-full bg-[var(--color-accent-yellow)] text-[#B45309] border border-[#B45309]/20 font-extrabold py-6 rounded-2xl hover:scale-[1.01] hover:shadow-[0_10px_25px_rgba(253,243,84,0.3)] transition-all mt-8 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wide text-xl md:text-2xl relative overflow-hidden"
               >
                 {/* Shine effect on button */}
                 <div className="absolute top-0 -left-[100%] w-1/2 h-full bg-white/20 skew-x-[-20deg] hover:animate-shine pointer-events-none" />

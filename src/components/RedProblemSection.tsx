@@ -29,14 +29,14 @@ export default function RedProblemSection() {
       >
         <motion.p 
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-          className="text-highlight-cyan font-extrabold uppercase tracking-[0.2em] text-xs mb-4"
+          className="text-highlight-cyan font-extrabold uppercase tracking-[0.2em] text-sm md:text-base mb-4"
         >
           ¿Ya has vivido esto?
         </motion.p>
 
         <motion.h2 
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-          className="text-3xl md:text-4xl font-serif font-extrabold text-white uppercase tracking-tight mb-4 leading-tight"
+          className="text-4xl md:text-5xl font-serif font-extrabold text-white uppercase tracking-tight mb-4 leading-tight"
         >
           Clientes me cuentan que han intentado cambiar repuestos o reparar,{" "}
           <span className="text-highlight-cyan">pero los problemas persisten...</span>
@@ -44,7 +44,7 @@ export default function RedProblemSection() {
 
         <motion.p 
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-          className="text-lg text-gray-400 font-medium mb-10"
+          className="text-xl md:text-2xl text-gray-400 font-medium mb-10"
         >
           ¿Usted ya ha experimentado esto?
         </motion.p>
@@ -57,10 +57,10 @@ export default function RedProblemSection() {
               role="listitem"
               className="flex items-start gap-4 p-5 bg-white/5 border border-cyan-500/20 rounded-2xl hover:border-cyan-400/40 hover:bg-white/8 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center" aria-hidden="true">
-                <span className="text-highlight-cyan font-bold text-base">✗</span>
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center" aria-hidden="true">
+                <span className="text-highlight-cyan font-bold text-lg">✗</span>
               </div>
-              <p className="text-base text-gray-200 pt-1">
+              <p className="text-lg md:text-xl text-gray-200 pt-1">
                 <span className="font-extrabold text-white">{p.bold}</span>
                 {p.rest}
               </p>
@@ -70,9 +70,9 @@ export default function RedProblemSection() {
 
         <motion.div 
           variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1, transition: { type: "spring" } } }}
-          className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl px-6 py-5" role="alert"
+          className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl px-6 py-5 md:py-8" role="alert"
         >
-          <p className="text-2xl md:text-3xl font-extrabold text-highlight-cyan uppercase tracking-wide leading-tight">
+          <p className="text-3xl md:text-4xl font-extrabold text-highlight-cyan uppercase tracking-wide leading-tight">
             Perdió tiempo y dinero…{" "}
             <span className="text-white">sin resultados.</span>
           </p>
@@ -82,10 +82,10 @@ export default function RedProblemSection() {
           variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
           className="mt-16 bg-white rounded-3xl p-8 md:p-12 text-left shadow-[0_30px_60px_rgba(0,0,0,0.5)] relative w-full" role="region" aria-label="La solución Denteq"
         >
-          <h3 className="text-3xl md:text-4xl font-extrabold italic text-[#2596be] mb-4">La solución:</h3>
-          <p className="text-xl md:text-2xl font-bold text-black mb-6">Denteq</p>
+          <h3 className="text-4xl md:text-5xl font-extrabold italic text-[#2596be] mb-4">La solución:</h3>
+          <p className="text-2xl md:text-3xl font-bold text-black mb-6">Denteq</p>
           
-          <ul className="space-y-4 text-base md:text-lg italic mb-12 md:pl-6 leading-snug" role="list">
+          <ul className="space-y-4 text-lg md:text-xl italic mb-12 md:pl-6 leading-snug" role="list">
             {[
               { bold: "Servicio puerta a puerta a nivel nacional (Ecuador)", rest: " — comodidad total sin interrumpir su trabajo." },
               { bold: "Repuestos para todas las marcas y modelos en un solo lugar", rest: " — sin necesidad de buscar en distintos proveedores." },
@@ -113,7 +113,7 @@ export default function RedProblemSection() {
           >
             <a
               href="/#booking"
-              className="bg-[#FFE000] text-black font-bold py-4 px-12 md:px-16 rounded-md text-lg md:text-xl shadow-[0_10px_20px_rgba(255,224,0,0.3)] transition-colors hover:bg-[#FFD000]"
+              className="bg-[#FFE000] text-black font-extrabold py-5 px-12 md:px-16 rounded-lg text-xl md:text-2xl shadow-[0_15px_30px_rgba(255,224,0,0.4)] transition-colors hover:bg-[#FFD000]"
               aria-label="Agenda Llamada"
             >
               Agenda Llamada
