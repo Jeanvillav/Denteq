@@ -6,17 +6,22 @@ export default function LetterSection() {
   return (
     <section className="w-full bg-[var(--color-primary-dark)] px-4 py-16 flex flex-col items-center" aria-label="La solución Denteq">
       <div className="max-w-2xl w-full space-y-12 text-base md:text-lg leading-relaxed">
-        {/* Encabezado visual para conectar con la sección anterior */}
+        {/* Botón CTA Superior */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center space-y-3 mb-4"
+          className="flex justify-center mb-10"
         >
-          <h2 className="text-4xl md:text-5xl font-serif font-extrabold text-[var(--color-accent-yellow)]">
-            La Solución Definitiva
-          </h2>
-          <p className="text-gray-300 text-lg md:text-xl">Conozca cómo transformamos el mantenimiento de su clínica:</p>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full md:w-auto">
+            <a
+              href="/#booking"
+              className="btn-primary w-full block text-center text-lg md:text-xl font-extrabold py-5 px-6 md:px-12 shadow-[0_15px_30px_rgba(255,224,0,0.3)] uppercase"
+              aria-label="Solicitar Recolección"
+            >
+              🚚 SOLICITAR RECOLECCIÓN GRATUITA
+            </a>
+          </motion.div>
         </motion.div>
 
         {/* Infografía 1 */}
