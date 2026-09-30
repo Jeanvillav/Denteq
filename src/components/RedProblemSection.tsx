@@ -14,8 +14,8 @@ export default function RedProblemSection() {
       className="w-full bg-[var(--color-primary-dark)] px-4 py-20 flex flex-col items-center text-center relative overflow-hidden"
       aria-label="Problemas comunes con piezas de mano"
     >
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[1px] bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50" aria-hidden="true" />
-      <div className="absolute top-[-5%] left-[20%] w-[40%] h-[40%] bg-red-900/20 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[1px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50" aria-hidden="true" />
+      <div className="absolute top-[-5%] left-[20%] w-[40%] h-[40%] bg-cyan-900/20 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
 
       <motion.div 
         className="max-w-2xl w-full relative z-10"
@@ -55,10 +55,10 @@ export default function RedProblemSection() {
               key={i}
               variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 100 } } }}
               role="listitem"
-              className="flex items-start gap-4 p-5 bg-white/5 border border-red-500/20 rounded-2xl hover:border-red-400/40 hover:bg-white/8 transition-all duration-300"
+              className="flex items-start gap-4 p-5 bg-white/5 border border-cyan-500/20 rounded-2xl hover:border-cyan-400/40 hover:bg-white/8 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-red-500/15 border border-red-500/30 flex items-center justify-center" aria-hidden="true">
-                <span className="text-red-400 font-bold text-base">✗</span>
+              <div className="flex-shrink-0 w-9 h-9 rounded-full bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center" aria-hidden="true">
+                <span className="text-highlight-cyan font-bold text-base">✗</span>
               </div>
               <p className="text-base text-gray-200 pt-1">
                 <span className="font-extrabold text-white">{p.bold}</span>
@@ -70,9 +70,9 @@ export default function RedProblemSection() {
 
         <motion.div 
           variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1, transition: { type: "spring" } } }}
-          className="bg-red-500/10 border border-red-500/30 rounded-2xl px-6 py-5" role="alert"
+          className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl px-6 py-5" role="alert"
         >
-          <p className="text-2xl md:text-3xl font-extrabold text-red-400 uppercase tracking-wide leading-tight">
+          <p className="text-2xl md:text-3xl font-extrabold text-highlight-cyan uppercase tracking-wide leading-tight">
             Perdió tiempo y dinero…{" "}
             <span className="text-white">sin resultados.</span>
           </p>
