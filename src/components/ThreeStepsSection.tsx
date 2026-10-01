@@ -59,12 +59,14 @@ export default function ThreeStepsSection() {
           <p className="text-2xl md:text-3xl font-extrabold text-white uppercase tracking-wide leading-relaxed">
             *Servicio de Presupuesto incluyendo recolección <span className="text-highlight-cyan">NO TIENE COSTO!</span> MENSAJEA O RELLENA EL FORMULARIO DE CONTACTO!
           </p>
+        </motion.div>
 
+        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
           <a 
             href="https://wa.me/593996120385" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="mt-6 md:mt-8 flex items-center justify-center gap-3 text-3xl md:text-4xl font-extrabold text-[#25D366] hover:text-[#128C7E] transition-all duration-300 mx-auto w-fit drop-shadow-[0_0_15px_rgba(37,211,102,0.4)]"
+            className="mt-12 mb-4 flex items-center justify-center gap-3 text-3xl md:text-4xl font-extrabold text-[#25D366] hover:text-[#128C7E] transition-all duration-300 mx-auto w-fit drop-shadow-[0_0_15px_rgba(37,211,102,0.4)]"
             aria-label="Contactar por WhatsApp"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-10 h-10 md:w-12 md:h-12">
