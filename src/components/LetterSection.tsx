@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function LetterSection() {
   return (
-    <section className="w-full bg-[var(--color-primary-dark)] px-4 py-16 flex flex-col items-center" aria-label="La solución Denteq">
+    <section className="w-full bg-transparent px-4 py-16 flex flex-col items-center" aria-label="La solución Denteq">
       <div className="max-w-2xl w-full space-y-12 text-base md:text-lg leading-relaxed">
         {/* Botón CTA Superior */}
         <motion.div 

@@ -11,7 +11,7 @@ export default function ThreeStepsSection() {
 
   return (
     <section
-      className="w-full bg-[var(--color-primary-dark)] px-4 py-20 flex flex-col items-center text-center relative overflow-hidden"
+      className="w-full bg-transparent px-4 py-20 flex flex-col items-center text-center relative overflow-hidden"
       aria-label="3 Simples Pasos"
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70%] h-[1px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50" aria-hidden="true" />

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[var(--color-primary-dark)] border-t border-white/8 text-white py-12 flex flex-col items-center gap-6">
+    <footer className="w-full bg-transparent border-t border-white/8 text-white py-12 flex flex-col items-center gap-6">
 
       {/* Logo */}
       <div className="relative w-52 h-16">

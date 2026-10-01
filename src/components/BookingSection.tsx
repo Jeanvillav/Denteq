@@ -66,7 +66,7 @@ export default function BookingSection() {
   };
 
   return (
-    <section id="booking" className="w-full bg-[#050D1F] px-4 py-24 flex flex-col items-center relative overflow-hidden" aria-label="Reserva tu recolección">
+    <section id="booking" className="w-full bg-transparent px-4 py-24 flex flex-col items-center relative overflow-hidden" aria-label="Reserva tu recolección">
       {/* Background accents */}
       <div className="absolute top-[10%] right-[-5%] w-[40%] h-[40%] bg-[var(--color-accent-cyan)]/10 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
       <div className="absolute bottom-[10%] left-[-5%] w-[40%] h-[40%] bg-[#00D68F]/5 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
