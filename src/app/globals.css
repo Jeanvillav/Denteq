@@ -35,13 +35,20 @@ body {
   background-image: 
     linear-gradient(to bottom, rgba(5, 13, 31, 0.88), rgba(2, 8, 16, 0.96)),
     url('/FondoPagina.jpeg');
-  background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: repeat;
+  background-size: 100% auto; /* Ajusta al ancho de la pantalla y repite hacia abajo si falta */
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-size: 50% auto; /* En pantallas grandes, repite para no hacer un zoom excesivo */
+  }
 }
 
 /* ─── Highlights ──────────────────────────────────────────── */
