@@ -2,13 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 export default function AboutSection() {
-  const problems = [
-    "No sujetan bien las fresas.",
-    "No tienen fuerza de tallado.",
-    "Cabecean.",
-    "Producen ruidos extraños.",
-  ];
-
   return (
     <section
       className="w-full bg-white text-[var(--color-primary-dark)] px-4 py-20 relative overflow-hidden"
@@ -63,26 +56,6 @@ export default function AboutSection() {
           <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-[var(--color-accent-cyan)]/20 mt-4 mb-6 hover:scale-[1.02] transition-transform duration-500">
             <img src="/piezas.jpeg" alt="Repuestos originales y de alta calidad" className="w-full h-auto object-cover" loading="lazy" />
           </div>
-
-          <p className="italic font-bold text-[var(--color-primary-dark)]">Estimado Dr./Dra.:</p>
-
-          <p className="underline underline-offset-4 font-bold text-[var(--color-primary-dark)]">
-            Las piezas de mano siempre dan problemas...
-          </p>
-
-          {/* Lista de problemas */}
-          <ul className="space-y-2" role="list">
-            {problems.map((item, i) => (
-              <li key={i} className="flex items-center gap-3 text-gray-700">
-                <span className="w-5 h-5 flex-shrink-0 rounded-full bg-red-50 border border-red-200 flex items-center justify-center text-red-500 font-extrabold text-xs" aria-hidden="true">✕</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <p className="italic text-[var(--color-primary-dark)] font-medium text-sm">
-            Clientes me cuentan que han intentado cambiar repuestos o reparar, pero los problemas persisten.
-          </p>
 
           <hr className="border-[var(--color-mid-bg)]" />
 

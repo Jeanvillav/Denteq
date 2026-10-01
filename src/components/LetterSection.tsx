@@ -46,27 +46,17 @@ export default function LetterSection() {
           <img src="/taller_2.jpeg" alt="Garantía, seguimiento de piezas y tiempos de entrega" className="w-full h-auto object-contain" loading="lazy" />
         </motion.div>
 
-        {/* Caja de cierre — CTA */}
+        {/* Botón CTA Inferior */}
         <motion.div 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-2xl p-8 text-[var(--color-primary-dark)] space-y-5 shadow-2xl text-center md:text-left"
+          className="flex justify-center mt-8"
         >
-          <p className="text-[var(--color-accent-yellow)] font-bold text-xl md:text-2xl" style={{color: '#B45309'}}>
-            Haga click en el botón abajo...
-          </p>
-
-          <p className="font-bold underline underline-offset-4 text-xl md:text-2xl">
-            Llena tus datos para enviar al courier.
-          </p>
-
-          <p className="font-extrabold text-3xl md:text-4xl">¡Hablamos pronto!</p>
-
-          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full md:w-auto">
             <a
               href="/#booking"
-              className="btn-primary w-full block text-center text-xl md:text-2xl font-extrabold py-6 mt-4 shadow-xl"
+              className="btn-primary w-full block text-center text-lg md:text-xl font-extrabold py-5 px-6 md:px-12 shadow-[0_15px_30px_rgba(255,224,0,0.3)] uppercase"
               aria-label="Ir al formulario de solicitud de recolección"
             >
               🚚 SOLICITAR RECOLECCIÓN GRATUITA
