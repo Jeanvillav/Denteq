@@ -16,6 +16,11 @@ export default function RedProblemSection() {
     [AutoScroll({ playOnInit: true, speed: 1.5, stopOnInteraction: false, stopOnMouseEnter: true })]
   );
 
+  const [emblaVideosRef] = useEmblaCarousel(
+    { loop: true, dragFree: true },
+    [AutoScroll({ playOnInit: true, speed: 1.2, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
+
   return (
     <section
       className="w-full bg-[var(--color-primary-dark)] px-4 py-20 flex flex-col items-center text-center relative overflow-hidden"
@@ -83,6 +88,44 @@ export default function RedProblemSection() {
             Perdió tiempo y dinero…{" "}
             <span className="text-white">sin resultados.</span>
           </p>
+        </motion.div>
+
+        {/* Carousel de videos */}
+        <motion.div 
+          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
+          className="w-full relative flex overflow-hidden py-10 mt-10"
+        >
+          <div className="absolute left-0 top-0 w-8 md:w-24 h-full bg-gradient-to-r from-[var(--color-primary-dark)] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 w-8 md:w-24 h-full bg-gradient-to-l from-[var(--color-primary-dark)] to-transparent z-10 pointer-events-none" />
+          
+          <div className="overflow-hidden w-full cursor-grab active:cursor-grabbing px-4 md:px-8" ref={emblaVideosRef}>
+            <div className="flex touch-pan-y gap-4 md:gap-8">
+              {[
+                '/CarruselVideos/video1.mp4',
+                '/CarruselVideos/video2.mp4',
+                '/CarruselVideos/video3.mp4',
+                '/CarruselVideos/video4.mp4',
+                '/CarruselVideos/video1.mp4',
+                '/CarruselVideos/video2.mp4',
+                '/CarruselVideos/video3.mp4',
+                '/CarruselVideos/video4.mp4'
+              ].map((src, i) => (
+                <div 
+                  key={i}
+                  className="flex-[0_0_auto] h-[350px] md:h-[500px] aspect-[9/16] rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,207,222,0.15)] border border-cyan-500/30 bg-black flex items-center justify-center relative group"
+                >
+                  <video 
+                    src={src}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         <motion.div 
