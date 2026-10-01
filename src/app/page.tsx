@@ -12,7 +12,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[var(--background)] flex flex-col items-center w-full overflow-x-hidden">
+    <main className="min-h-screen bg-transparent flex flex-col items-center w-full overflow-x-hidden">
       <StickyHeader />
       
       <div className="w-full">
