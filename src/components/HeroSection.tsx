@@ -27,7 +27,7 @@ export default function HeroSection() {
           className="flex justify-center mb-7"
         >
           <span className="status-pill" role="note">
-            <span className="w-2 h-2 rounded-full bg-[var(--color-accent-green)] animate-pulse" aria-hidden="true" />
+            <span className="w-2 h-2 rounded-full bg-[var(--color-accent-cyan)] animate-pulse" aria-hidden="true" />
             Servicio Courier Puerta/Puerta · Ecuador Nacional · Asegurado
           </span>
         </motion.div>

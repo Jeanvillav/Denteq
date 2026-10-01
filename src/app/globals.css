@@ -103,9 +103,9 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(0, 214, 143, 0.10);
-  border: 1px solid rgba(0, 214, 143, 0.30);
-  color: var(--color-accent-green);
+  background: rgba(0, 207, 222, 0.10);
+  border: 1px solid rgba(0, 207, 222, 0.30);
+  color: var(--color-accent-cyan);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
