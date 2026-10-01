@@ -105,10 +105,12 @@ export default function RedProblemSection() {
                 '/CarruselVideos/video2.mp4',
                 '/CarruselVideos/video3.mp4',
                 '/CarruselVideos/video4.mp4',
+                '/CarruselVideos/video5.mp4',
                 '/CarruselVideos/video1.mp4',
                 '/CarruselVideos/video2.mp4',
                 '/CarruselVideos/video3.mp4',
-                '/CarruselVideos/video4.mp4'
+                '/CarruselVideos/video4.mp4',
+                '/CarruselVideos/video5.mp4'
               ].map((src, i) => (
                 <div 
                   key={i}
