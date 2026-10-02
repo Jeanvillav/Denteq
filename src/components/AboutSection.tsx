@@ -17,7 +17,7 @@ export default function AboutSection() {
           <div className="relative mb-5">
             <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-[var(--color-accent-cyan)]/30 shadow-[0_0_40px_rgba(0,207,222,0.2)] hover:scale-105 transition-transform duration-500">
               <Image
-                src="/TioKevin.jpeg"
+                src="/FotoKevin.jpeg"
                 alt="Kevin Easter, Director de Denteq, ingeniero dental desde 1997"
                 width={176}
                 height={176}
