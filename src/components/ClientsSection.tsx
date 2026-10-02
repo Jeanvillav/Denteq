@@ -44,6 +44,26 @@ export default function ClientsSection() {
           Repuestos para todas las marcas y modelos de Piezas de Mano - Micromotores - Contrangulos - Piezas Rectas - Cavitrones - Scalers - Ultrasonidos
         </motion.p>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center mt-4 mb-20 px-4"
+        >
+          <h2 className="text-2xl md:text-4xl font-extrabold text-[var(--color-primary-dark)] text-center mb-10 max-w-3xl leading-snug">
+            Repuestos Para Todas Las Marcas Y Modelos En Un Solo Lugar, Ahorro De Tiempo Y Dinero
+          </h2>
+          <div className="w-full max-w-4xl relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-[var(--color-mid-bg)]">
+            <Image 
+              src="/piezas.jpeg" 
+              alt="Repuestos para todas las marcas y modelos" 
+              width={1200}
+              height={800}
+              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
+            />
+          </div>
+        </motion.div>
+
         {/* Marquee container */}
         <div className="w-full relative flex overflow-hidden">
           {/* Gradient masks for smooth edges */}
