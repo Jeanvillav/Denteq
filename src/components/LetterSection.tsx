@@ -16,7 +16,7 @@ export default function LetterSection() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full md:w-auto">
             <a
               href="/#booking"
-              className="btn-primary w-full block text-center text-lg md:text-xl font-extrabold py-5 px-6 md:px-12 shadow-[0_15px_30px_rgba(0,207,222,0.3)] uppercase"
+              className="btn-primary w-full block text-center text-lg md:text-xl font-extrabold py-5 px-6 md:px-12 shadow-[0_15px_30px_rgba(255,224,0,0.3)] uppercase"
               aria-label="Solicitar Recolección"
             >
               🚚 SOLICITAR RECOLECCIÓN GRATUITA
@@ -56,7 +56,7 @@ export default function LetterSection() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full md:w-auto">
             <a
               href="/#booking"
-              className="btn-primary w-full block text-center text-lg md:text-xl font-extrabold py-5 px-6 md:px-12 shadow-[0_15px_30px_rgba(0,207,222,0.3)] uppercase"
+              className="btn-primary w-full block text-center text-lg md:text-xl font-extrabold py-5 px-6 md:px-12 shadow-[0_15px_30px_rgba(255,224,0,0.3)] uppercase"
               aria-label="Ir al formulario de solicitud de recolección"
             >
               🚚 SOLICITAR RECOLECCIÓN GRATUITA

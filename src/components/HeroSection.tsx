@@ -82,7 +82,7 @@ export default function HeroSection() {
         >
           <a
             href="/#booking"
-            className="btn-primary text-lg md:text-xl w-full block text-center px-8 py-5 hover:scale-105 transition-transform duration-300 font-extrabold shadow-[0_15px_30px_rgba(0,207,222,0.3)]"
+            className="btn-primary text-lg md:text-xl w-full block text-center px-8 py-5 hover:scale-105 transition-transform duration-300 font-extrabold shadow-[0_15px_30px_rgba(255,224,0,0.3)]"
             aria-label="Ir al formulario de recolección gratuita"
           >
             🚚 SOLICITAR RECOLECCIÓN GRATUITA
