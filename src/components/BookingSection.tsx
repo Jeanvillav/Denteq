@@ -19,6 +19,7 @@ const pickupSchema = z.object({
   mainStreet: z.string().min(2, "La calle principal es requerida"),
   crossStreet: z.string().min(2, "La calle transversal es requerida"),
   houseNumber: z.string().min(1, "El número de casa/consultorio es requerido"),
+  reference: z.string().min(2, "Por favor incluye una referencia"),
   openTime: z.string().min(1, "Apertura requerida"),
   closeTime: z.string().min(1, "Cierre requerido"),
   pickupDate: z.string().min(2, "Por favor selecciona un día de recolección"),
@@ -249,6 +250,18 @@ export default function BookingSection() {
                         <p className="text-red-500 text-xs mt-1.5 font-medium">Ambos horarios son requeridos</p>
                       )}
                     </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="reference" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Referencia *</label>
+                    <input 
+                      id="reference"
+                      {...register("reference")}
+                      className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
+                      placeholder="Ej. Frente a escuela, Diagonal a la panadería..."
+                      aria-invalid={!!errors.reference}
+                    />
+                    {errors.reference && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.reference.message}</p>}
                   </div>
                 </div>
               </div>

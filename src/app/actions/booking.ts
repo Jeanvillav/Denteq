@@ -39,7 +39,7 @@ export async function submitBooking(data: any) {
           phone: data.phone,
           city: data.city,
           main_street: data.mainStreet,
-          cross_street: data.crossStreet,
+          cross_street: `${data.crossStreet} | Ref: ${data.reference || ''}`,
           house_number: data.houseNumber,
           business_hours: data.businessHours,
           pickup_date: data.pickupDate,
@@ -92,6 +92,7 @@ export async function submitBooking(data: any) {
                 <tr><td><strong>Ciudad:</strong></td><td>${data.city}</td></tr>
                 <tr><td><strong>Calle Principal:</strong></td><td>${data.mainStreet}</td></tr>
                 <tr><td><strong>Calle Transversal:</strong></td><td>${data.crossStreet}</td></tr>
+                <tr><td><strong>Referencia:</strong></td><td>${data.reference}</td></tr>
                 <tr><td><strong>Nro. Casa/Consultorio:</strong></td><td>${data.houseNumber}</td></tr>
                 <tr><td><strong>Horario de Atención:</strong></td><td>${data.businessHours}</td></tr>
                 <tr><td><strong>Día Preferido:</strong></td><td>${data.pickupDate}</td></tr>
