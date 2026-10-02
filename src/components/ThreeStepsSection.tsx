@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ThreeStepsSection() {
   const steps = [
-    { num: "1", text: "CONTACTANOS! Y COORDINAMOS LA RECOLECCION." },
+    { num: "1", text: "¡CONTÁCTANOS! Y COORDINAMOS LA RECOLECCIÓN." },
     { num: "2", text: "DIAGNOSTICAMOS Y REPARAMOS SI ESTÁS DE ACUERDO." },
     { num: "3", text: "ENTREGAMOS TUS PIEZAS EN TU DIRECCIÓN EN PERFECTO FUNCIONAMIENTO." },
   ];
@@ -57,7 +57,7 @@ export default function ThreeStepsSection() {
           className="bg-cyan-500/10 border border-cyan-500/30 rounded-2xl px-6 py-8 md:py-10" role="alert"
         >
           <p className="text-2xl md:text-3xl font-extrabold text-white uppercase tracking-wide leading-relaxed">
-            *Servicio de Presupuesto incluyendo recolección <span className="text-highlight-cyan">NO TIENE COSTO!</span> MENSAJEA O RELLENA EL FORMULARIO DE CONTACTO!
+            *¡Servicio de Presupuesto incluyendo recolección <span className="text-highlight-cyan">NO TIENE COSTO!</span> ¡ENVÍANOS UN MENSAJE O LLENA EL FORMULARIO DE CONTACTO!
           </p>
         </motion.div>
 

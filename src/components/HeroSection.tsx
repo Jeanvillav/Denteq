@@ -56,7 +56,7 @@ export default function HeroSection() {
           className="my-7 px-6 py-3 glass-card rounded-full border-glow inline-block"
         >
           <p className="text-sm font-extrabold text-white/90 uppercase tracking-widest text-center">
-            Servicio Curier Puerta/Puerta a Nivel Nacional Asegurado
+            Servicio Courier Puerta a Puerta a Nivel Nacional Asegurado
           </p>
         </motion.div>
 

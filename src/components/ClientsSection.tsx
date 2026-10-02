@@ -41,7 +41,7 @@ export default function ClientsSection() {
           viewport={{ once: true }}
           className="text-sm md:text-base font-extrabold text-[var(--color-primary-dark)] uppercase tracking-wider md:tracking-[0.25em] mb-10 px-4 max-w-4xl mx-auto leading-relaxed"
         >
-          Repuestos para todas las marcas y modelos de Piezas de Mano - Micromotores - Contrangulos - Piezas Rectas - Cavitrones - Scalers - Ultrasonidos
+          Repuestos para todas las marcas y modelos de Piezas de Mano - Micromotores - Contraángulos - Piezas Rectas - Cavitrones - Scalers - Ultrasonidos
         </motion.p>
 
         <motion.div
