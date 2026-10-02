@@ -18,19 +18,6 @@ export default function HeroSection() {
           visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
         }}
       >
-        {/* Status pill */}
-        <motion.div 
-          variants={{
-            hidden: { opacity: 0, y: -20 },
-            visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
-          }}
-          className="flex justify-center mb-7"
-        >
-          <span className="status-pill" role="note">
-            <span className="w-2 h-2 rounded-full bg-[var(--color-accent-cyan)] animate-pulse" aria-hidden="true" />
-            Servicio Courier Puerta/Puerta · Ecuador Nacional · Asegurado
-          </span>
-        </motion.div>
 
         {/* Titular principal */}
         <motion.h1 
