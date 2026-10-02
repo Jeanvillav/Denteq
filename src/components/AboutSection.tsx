@@ -24,18 +24,13 @@ export default function AboutSection() {
                 className="object-cover w-full h-full"
               />
             </div>
-            {/* Badge de experiencia */}
-            <div className="absolute -bottom-2 -right-2 bg-[var(--color-accent-cyan)] text-[var(--color-primary-dark)] text-xs font-extrabold rounded-full px-3 py-1.5 shadow-lg whitespace-nowrap">
-              Desde 1997
-            </div>
+
           </div>
 
           <h2 className="font-extrabold text-2xl font-serif text-[var(--color-primary-dark)] tracking-tight">
             KEVIN EASTER
           </h2>
-          <span className="mt-2 inline-block text-[var(--color-accent-cyan)] font-extrabold uppercase tracking-widest text-xs bg-[var(--color-primary-dark)] px-4 py-1.5 rounded-full shadow-md">
-            Director de Denteq
-          </span>
+
 
           {/* Especialidades */}
           <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs font-bold text-[var(--color-primary-dark)]">
