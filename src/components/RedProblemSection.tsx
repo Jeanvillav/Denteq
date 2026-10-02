@@ -50,7 +50,7 @@ export default function RedProblemSection() {
 
         <motion.p 
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-          className="text-xl md:text-2xl text-gray-400 font-medium mb-10"
+          className="text-xl md:text-2xl text-white/80 font-medium mb-10"
         >
           ¿Usted ya ha experimentado esto?
         </motion.p>
@@ -66,7 +66,7 @@ export default function RedProblemSection() {
               <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center" aria-hidden="true">
                 <span className="text-highlight-cyan font-bold text-lg">✗</span>
               </div>
-              <p className="text-lg md:text-xl text-gray-200 pt-1">
+              <p className="text-lg md:text-xl text-white pt-1">
                 <span className="font-extrabold text-white">{p.bold}</span>
                 {p.rest}
               </p>
@@ -147,7 +147,7 @@ export default function RedProblemSection() {
                 transition={{ delay: 0.1 * i }}
               >
                 <span className="font-bold text-[#2596be]">{item.bold}</span>
-                <span className="text-gray-800 font-medium">{item.rest}</span>
+                <span className="text-[var(--color-primary-dark)] font-medium">{item.rest}</span>
               </motion.li>
             ))}
           </ul>
@@ -172,7 +172,7 @@ export default function RedProblemSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.15 }}
-              className="max-w-xs md:max-w-sm mx-auto rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 relative group"
+              className="max-w-xs md:max-w-sm mx-auto rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-[var(--color-accent-cyan)]/20 relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent z-10 pointer-events-none" aria-hidden="true" />
               <img src="/ExpressDelivery.jpeg" alt="Entrega express Denteq" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out" loading="lazy" />
@@ -183,7 +183,7 @@ export default function RedProblemSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="max-w-xs md:max-w-sm mx-auto rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100 relative group"
+              className="max-w-xs md:max-w-sm mx-auto rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-[var(--color-accent-cyan)]/20 relative group"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent z-10 pointer-events-none" aria-hidden="true" />
               <img src="/paquete.jpeg" alt="Paquete de recolección courier de Denteq" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out" loading="lazy" />
@@ -202,7 +202,7 @@ export default function RedProblemSection() {
                   ].map((src, i) => (
                     <div 
                       key={i}
-                      className="flex-[0_0_auto] h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-100 group relative bg-gray-50 flex items-center justify-center"
+                      className="flex-[0_0_auto] h-[300px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-[var(--color-accent-cyan)]/20 group relative bg-white flex items-center justify-center"
                     >
                       <img src={src} alt={`Detalle de repuestos dentales`} className="w-auto h-full object-contain transform group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                     </div>

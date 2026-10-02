@@ -11,7 +11,7 @@ export default function Footer() {
       </div>
 
       {/* Contact & Social Links */}
-      <div className="flex flex-col items-center gap-3 text-sm font-semibold text-gray-300 text-center">
+      <div className="flex flex-col items-center gap-3 text-sm font-semibold text-white/90 text-center">
         <p>Azuay y Av. Universitaria</p>
         <p>Loja</p>
         
@@ -56,7 +56,7 @@ export default function Footer() {
       </div>
 
       {/* Legal Links */}
-      <div className="flex gap-4 text-xs font-medium text-gray-500">
+      <div className="flex gap-4 text-xs font-medium text-white/60">
         <Link href="/privacy" className="hover:text-[var(--color-accent-cyan)] transition-colors">
           Política de Privacidad
         </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
       {/* Copyright */}
       <Link
         href="https://denteq-ec.vercel.app/"
-        className="text-gray-600 text-xs tracking-widest uppercase hover:text-gray-400 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent-cyan)] rounded"
+        className="text-white/50 text-xs tracking-widest uppercase hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent-cyan)] rounded"
         aria-label="Sitio oficial de Denteq"
       >
         © 2026 Denteq — Todos los derechos reservados

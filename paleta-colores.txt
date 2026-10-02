@@ -1,0 +1,7 @@
+Paleta de Colores de Denteq:
+
+1. Azul Denteq (Fondo principal / Textos oscuros): #050D1F
+2. Celeste (Acentos, textos destacados): #00CFDE
+3. Amarillo (Botones de llamado a la acción): #F7E93A
+4. Blanco (Textos principales sobre fondos oscuros / Fondos claros): #FFFFFF
+5. Negro (Textos sobre fondos blancos o amarillos): #000000

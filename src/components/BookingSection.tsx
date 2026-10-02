@@ -79,13 +79,13 @@ export default function BookingSection() {
         <div className="text-left max-w-2xl mx-auto space-y-4 mb-12 glass-card p-6 md:p-8 rounded-2xl border border-[var(--color-accent-cyan)]/20 shadow-lg">
           <div className="flex items-start gap-3">
             <span className="text-[var(--color-accent-cyan)] text-2xl font-black mt-0.5" aria-hidden="true">✓</span>
-            <p className="text-lg md:text-xl text-gray-300">
+            <p className="text-lg md:text-xl text-white/80">
               <strong className="text-white">Servicio Puerta a Puerta:</strong> Vamos hasta tu clínica en todo el Ecuador para recoger tus piezas.
             </p>
           </div>
           <div className="flex items-start gap-3">
             <span className="text-[var(--color-accent-cyan)] text-2xl font-black mt-0.5" aria-hidden="true">✓</span>
-            <p className="text-lg md:text-xl text-gray-300">
+            <p className="text-lg md:text-xl text-white/80">
               <strong className="text-white">Presupuesto sin compromiso:</strong> Analizamos tus instrumentos y te damos la mejor opción de reparación.
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function BookingSection() {
             <Image src="/LogoDenteq.jpeg" alt="Logo de Denteq" fill className="object-contain" />
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-[var(--color-primary-dark)] text-center w-full pb-4 border-b border-gray-100">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-[var(--color-primary-dark)] text-center w-full pb-4 border-b border-[var(--color-primary-dark)]/10">
             Datos para la Recolección
           </h3>
 
@@ -115,22 +115,22 @@ export default function BookingSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-bold text-gray-700 mb-1">Nombre *</label>
+                  <label htmlFor="firstName" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Nombre *</label>
                   <input 
                     id="firstName"
                     {...register("firstName")}
-                    className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                    className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                     placeholder="Ej. Juan"
                     aria-invalid={!!errors.firstName}
                   />
                   {errors.firstName && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.firstName.message}</p>}
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-bold text-gray-700 mb-1">Apellido *</label>
+                  <label htmlFor="lastName" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Apellido *</label>
                   <input 
                     id="lastName"
                     {...register("lastName")}
-                    className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                    className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                     placeholder="Ej. Pérez"
                     aria-invalid={!!errors.lastName}
                   />
@@ -140,19 +140,19 @@ export default function BookingSection() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-1">Correo Electrónico *</label>
+                  <label htmlFor="email" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Correo Electrónico *</label>
                   <input 
                     id="email"
                     {...register("email")}
                     type="email"
-                    className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                    className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                     placeholder="doctor@clinica.com"
                     aria-invalid={!!errors.email}
                   />
                   {errors.email && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.email.message}</p>}
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-1">Teléfono Móvil *</label>
+                  <label htmlFor="phone" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Teléfono Móvil *</label>
                   <Controller
                     name="phone"
                     control={control}
@@ -163,7 +163,7 @@ export default function BookingSection() {
                         value={value}
                         onChange={onChange}
                         id="phone"
-                        className="w-full p-3.5 border border-gray-200 rounded-xl focus-within:ring-2 focus-within:ring-[var(--color-accent-cyan)] focus-within:border-[var(--color-accent-cyan)] bg-gray-50 text-gray-800 transition-all shadow-sm [&_input]:w-full [&_input]:bg-transparent [&_input]:outline-none [&_input]:ml-3 [&_input]:text-gray-800 [&_input]:border-none"
+                        className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus-within:ring-2 focus-within:ring-[var(--color-accent-cyan)] focus-within:border-[var(--color-accent-cyan)] bg-[var(--color-light-bg)] text-black transition-all shadow-sm [&_input]:w-full [&_input]:bg-transparent [&_input]:outline-none [&_input]:ml-3 [&_input]:text-black [&_input]:border-none"
                       />
                     )}
                   />
@@ -171,16 +171,16 @@ export default function BookingSection() {
                 </div>
               </div>
 
-              <div className="border-t border-gray-100 pt-6 mt-6">
+              <div className="border-t border-[var(--color-primary-dark)]/10 pt-6 mt-6">
                 <h4 className="font-bold text-[var(--color-primary-dark)] text-lg mb-4">Dirección de Recolección</h4>
                 
                 <div className="space-y-5">
                   <div>
-                    <label htmlFor="city" className="block text-sm font-bold text-gray-700 mb-1">Ciudad *</label>
+                    <label htmlFor="city" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Ciudad *</label>
                     <input 
                       id="city"
                       {...register("city")}
-                      className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                      className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                       placeholder="Ej. Quito, Guayaquil..."
                       aria-invalid={!!errors.city}
                     />
@@ -189,21 +189,21 @@ export default function BookingSection() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="mainStreet" className="block text-sm font-bold text-gray-700 mb-1">Calle Principal *</label>
+                      <label htmlFor="mainStreet" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Calle Principal *</label>
                       <input 
                         id="mainStreet"
                         {...register("mainStreet")}
-                        className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                        className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                         aria-invalid={!!errors.mainStreet}
                       />
                       {errors.mainStreet && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.mainStreet.message}</p>}
                     </div>
                     <div>
-                      <label htmlFor="crossStreet" className="block text-sm font-bold text-gray-700 mb-1">Calle Transversal *</label>
+                      <label htmlFor="crossStreet" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Calle Transversal *</label>
                       <input 
                         id="crossStreet"
                         {...register("crossStreet")}
-                        className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                        className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                         aria-invalid={!!errors.crossStreet}
                       />
                       {errors.crossStreet && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.crossStreet.message}</p>}
@@ -212,34 +212,34 @@ export default function BookingSection() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-end">
                     <div>
-                      <label htmlFor="houseNumber" className="block text-sm font-bold text-gray-700 mb-1">Número de Casa / Consultorio *</label>
+                      <label htmlFor="houseNumber" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Número de Casa / Consultorio *</label>
                       <input 
                         id="houseNumber"
                         {...register("houseNumber")}
-                        className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                        className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                         placeholder="Ej. N45-12 o Piso 3"
                         aria-invalid={!!errors.houseNumber}
                       />
                       {errors.houseNumber && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.houseNumber.message}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-bold text-gray-700 mb-1">Horario de Atención *</label>
+                      <label className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">Horario de Atención *</label>
                       <div className="flex items-center gap-2">
                         <div className="flex-1">
                           <input 
                             type="time"
                             {...register("openTime")}
-                            className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                            className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                             aria-invalid={!!errors.openTime}
                             aria-label="Hora de apertura"
                           />
                         </div>
-                        <span className="font-bold text-gray-400">a</span>
+                        <span className="font-bold text-[var(--color-primary-dark)]/60">a</span>
                         <div className="flex-1">
                           <input 
                             type="time"
                             {...register("closeTime")}
-                            className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm" 
+                            className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm" 
                             aria-invalid={!!errors.closeTime}
                             aria-label="Hora de cierre"
                           />
@@ -253,16 +253,16 @@ export default function BookingSection() {
                 </div>
               </div>
 
-              <div className="border-t border-gray-100 pt-6 mt-6">
+              <div className="border-t border-[var(--color-primary-dark)]/10 pt-6 mt-6">
                 <h4 className="font-bold text-[var(--color-primary-dark)] text-lg mb-4">Detalles Adicionales</h4>
                 
                 <div className="space-y-5">
                   <div>
-                    <label htmlFor="pickupDate" className="block text-sm font-bold text-gray-700 mb-1">¿Qué día prefiere la recolección? *</label>
+                    <label htmlFor="pickupDate" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">¿Qué día prefiere la recolección? *</label>
                     <select 
                       id="pickupDate"
                       {...register("pickupDate")}
-                      className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm cursor-pointer"
+                      className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm cursor-pointer"
                       aria-invalid={!!errors.pickupDate}
                     >
                       <option value="">Selecciona una opción</option>
@@ -275,12 +275,12 @@ export default function BookingSection() {
                   </div>
 
                   <div>
-                    <label htmlFor="question" className="block text-sm font-bold text-gray-700 mb-1">¿Qué piezas envía y cuál es el problema? *</label>
+                    <label htmlFor="question" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">¿Qué piezas envía y cuál es el problema? *</label>
                     <textarea 
                       id="question"
                       {...register("question")}
                       rows={3} 
-                      className="w-full p-3.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-gray-50 text-gray-800 transition-all shadow-sm resize-y"
+                      className="w-full p-3.5 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-[var(--color-light-bg)] text-black transition-all shadow-sm resize-y"
                       placeholder="Ej. Envío 2 piezas de mano que cabecean y no tienen fuerza."
                       aria-invalid={!!errors.question}
                     ></textarea>
@@ -289,14 +289,14 @@ export default function BookingSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 mt-6 pt-2 bg-gray-50 p-4 rounded-xl border border-gray-100">
+              <div className="flex items-start gap-3 mt-6 pt-2 bg-[var(--color-light-bg)] p-4 rounded-xl border border-[var(--color-primary-dark)]/10">
                 <input 
                   type="checkbox" 
                   id="terms"
                   {...register("termsAccepted")}
-                  className="mt-1 w-5 h-5 text-[var(--color-accent-cyan)] bg-white border-gray-300 rounded focus:ring-[var(--color-accent-cyan)] cursor-pointer"
+                  className="mt-1 w-5 h-5 text-[var(--color-accent-cyan)] bg-white border-[var(--color-accent-cyan)]/40 rounded focus:ring-[var(--color-accent-cyan)] cursor-pointer"
                 />
-                <label htmlFor="terms" className="text-sm text-gray-700 font-medium cursor-pointer leading-tight">
+                <label htmlFor="terms" className="text-sm text-[var(--color-primary-dark)] font-medium cursor-pointer leading-tight">
                   Entiendo que Denteq me llamará para confirmar estos datos antes de enviar al courier.
                 </label>
               </div>

@@ -58,7 +58,7 @@ export default function AboutSection() {
               ¡YO TE AYUDO!
             </p>
             
-            <p className="text-xs md:text-sm font-bold text-gray-500 uppercase tracking-widest mt-6">
+            <p className="text-xs md:text-sm font-bold text-[var(--color-primary-dark)]/80 uppercase tracking-widest mt-6">
               Envíame un mensaje / Escríbeme al WhatsApp:
             </p>
             
@@ -74,7 +74,7 @@ export default function AboutSection() {
               099 612 0385
             </a>
             
-            <p className="text-xs md:text-sm font-bold text-gray-500 uppercase tracking-widest mt-6 max-w-lg">
+            <p className="text-xs md:text-sm font-bold text-[var(--color-primary-dark)]/80 uppercase tracking-widest mt-6 max-w-lg">
               O completa el formulario de abajo y un miembro de mi equipo te contactará.
             </p>
           </div>
