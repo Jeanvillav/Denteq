@@ -87,7 +87,7 @@ export default function HeroSection() {
           >
             🚚 SOLICITAR RECOLECCIÓN GRATUITA
           </a>
-          <p className="mt-3 text-white/60 text-xs tracking-wide">Sin costo · Sin compromiso · Te llamamos en menos de 24h</p>
+          <p className="mt-3 text-white text-xs tracking-wide">Sin costo · Sin compromiso · Te llamamos en menos de 24h</p>
         </motion.div>
       </motion.div>
     </section>
