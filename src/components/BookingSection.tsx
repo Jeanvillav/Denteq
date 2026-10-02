@@ -314,7 +314,7 @@ export default function BookingSection() {
               <button 
                 type="submit" 
                 disabled={isSubmitting || submitMessage?.type === "success"}
-                className="w-full bg-[var(--color-accent-yellow)] text-[#B45309] border border-[#B45309]/20 font-extrabold py-6 rounded-2xl hover:scale-[1.01] hover:shadow-[0_10px_25px_rgba(253,243,84,0.3)] transition-all mt-8 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wide text-xl md:text-2xl relative overflow-hidden"
+                className="btn-primary w-full py-6 mt-8 disabled:opacity-50 disabled:cursor-not-allowed text-xl md:text-2xl"
               >
                 {/* Shine effect on button */}
                 <div className="absolute top-0 -left-[100%] w-1/2 h-full bg-white/20 skew-x-[-20deg] hover:animate-shine pointer-events-none" />

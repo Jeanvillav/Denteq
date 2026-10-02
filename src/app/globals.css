@@ -101,7 +101,7 @@ body {
 
 /* ─── Botón principal ──────────────────────────────────────── */
 .btn-primary {
-  @apply bg-[var(--color-accent-yellow)] text-[#050D1F] px-10 py-4 uppercase tracking-widest transition-all duration-300 font-extrabold font-serif rounded-xl border-2 border-[rgba(247,233,58,0.0)] hover:scale-105 hover:brightness-110 shadow-[0_4px_28px_rgba(247,233,58,0.50)] hover:shadow-[0_6px_40px_rgba(247,233,58,0.70)] inline-block text-center cursor-pointer;
+  @apply bg-[var(--color-accent-cyan)] text-black px-10 py-4 uppercase tracking-widest transition-all duration-300 font-extrabold font-serif rounded-xl border-2 border-[rgba(0,207,222,0.0)] hover:scale-105 hover:brightness-110 shadow-[0_4px_28px_rgba(0,207,222,0.50)] hover:shadow-[0_6px_40px_rgba(0,207,222,0.70)] inline-block text-center cursor-pointer;
 }
 
 /* ─── Borde brillante ──────────────────────────────────────── */
