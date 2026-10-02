@@ -39,12 +39,6 @@ export default function RedProblemSection() {
           visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
         }}
       >
-        <motion.p 
-          variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-          className="text-highlight-cyan font-extrabold uppercase tracking-[0.2em] text-sm md:text-base mb-4"
-        >
-          ¿Ya has vivido esto?
-        </motion.p>
 
         <motion.h2 
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
