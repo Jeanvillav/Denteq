@@ -39,30 +39,27 @@ export default function ClientsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-sm md:text-base font-extrabold text-[var(--color-primary-dark)] uppercase tracking-wider md:tracking-[0.25em] mb-14 px-4 max-w-4xl mx-auto leading-relaxed"
+          className="text-sm md:text-base font-extrabold text-[var(--color-primary-dark)] uppercase tracking-wider md:tracking-[0.25em] mb-10 px-4 max-w-4xl mx-auto leading-relaxed"
         >
           Repuestos para todas las marcas y modelos de Piezas de Mano - Micromotores - Contrangulos - Piezas Rectas - Cavitrones - Scalers - Ultrasonidos
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="flex flex-col items-center mt-4 mb-20 px-4"
+          className="w-full max-w-6xl mx-auto px-4 mb-20 relative group"
         >
-          <h2 className="text-2xl md:text-4xl font-extrabold text-[var(--color-primary-dark)] text-center mb-10 max-w-3xl leading-snug">
-            Repuestos Para Todas Las Marcas Y Modelos En Un Solo Lugar, Ahorro De Tiempo Y Dinero
-          </h2>
-          <div className="w-full max-w-4xl relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-[var(--color-mid-bg)]">
-            <Image 
+          <div className="rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-[var(--color-mid-bg)] relative bg-white">
+            <img 
               src="/piezas.jpeg" 
-              alt="Repuestos para todas las marcas y modelos" 
-              width={1200}
-              height={800}
-              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
+              alt="Variedad de repuestos y piezas de mano" 
+              className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out" 
+              loading="lazy" 
             />
           </div>
         </motion.div>
+
 
         {/* Marquee container */}
         <div className="w-full relative flex overflow-hidden">
