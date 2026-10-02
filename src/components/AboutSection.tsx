@@ -45,28 +45,15 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* === Carta al doctor === */}
-        <div className="space-y-5 text-base text-gray-700 leading-relaxed">
-
-          <h3 className="font-extrabold text-xl md:text-2xl text-[var(--color-primary-dark)] border-b-2 border-[var(--color-accent-cyan)] pb-3 text-center">
-            Repuestos Para Todas Las Marcas Y Modelos En Un Solo Lugar,{" "}
-            <span className="text-[var(--color-primary-dark)]">Ahorro De Tiempo Y Dinero.</span>
-          </h3>
-
-          <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-[var(--color-accent-cyan)]/20 mt-4 mb-6 hover:scale-[1.02] transition-transform duration-500">
-            <img src="/piezas.jpeg" alt="Repuestos originales y de alta calidad" className="w-full h-auto object-cover" loading="lazy" />
-          </div>
-
-          <hr className="border-[var(--color-mid-bg)]" />
-
+        {/* === Sobre su experiencia === */}
+        <div className="bg-[#fdf6fc] p-6 md:p-10 rounded-3xl shadow-lg border border-[var(--color-accent-cyan)]/10 text-lg md:text-xl text-[var(--color-primary-dark)] font-medium leading-relaxed text-center space-y-6">
           <p>
-            Inicié mi trayectoria en la industria dental en <strong>1997 en Gran Bretaña</strong>, especializándome en{" "}
-            <strong>Ingeniería Dental (Sistemas neumáticos/electrónicos)</strong>.
+            Inicié mi trayectoria en la industria dental en <strong className="text-[var(--color-accent-cyan)]">1997 en Gran Bretaña</strong>, especializándome en{" "}
+            <strong className="text-[var(--color-accent-cyan)]">Ingeniería Dental (Sistemas neumáticos/electrónicos)</strong>.
           </p>
-          <p className="text-sm text-[var(--color-primary-dark)] font-medium">
+          <p>
             Con formación especializada, años de experiencia en campo y una visión enfocada en resultados, nuestra misión es ayudar a los profesionales de la odontología a mantener su equipamiento clínico en óptimas condiciones, evitando pérdidas de tiempo y dinero, y asegurando que cada consulta funcione con la máxima eficiencia.
           </p>
-
         </div>
       </div>
     </section>
