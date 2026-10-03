@@ -21,7 +21,7 @@ export default function AboutSection() {
                 alt="Kevin Easter, Director de Denteq, ingeniero dental desde 1997"
                 width={176}
                 height={176}
-                className="object-cover w-full h-full"
+                className="object-cover object-top w-full h-full"
               />
             </div>
 
