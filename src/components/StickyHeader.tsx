@@ -42,11 +42,11 @@ export default function StickyHeader() {
         <div className={`flex items-center transition-all duration-500 ${isScrolled ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4 pointer-events-none"}`}>
           <a 
             href="/#booking"
-            className="btn-primary !px-3 sm:!px-4 md:!px-5 !py-1.5 sm:!py-2 md:!py-2.5 text-[10px] sm:text-xs md:text-sm shadow-none hover:shadow-[0_0_15px_rgba(247,233,58,0.4)] whitespace-normal sm:whitespace-nowrap text-center flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1 leading-tight"
+            className="btn-primary !px-3 sm:!px-4 md:!px-5 !py-1.5 sm:!py-2 md:!py-2.5 text-[10px] sm:text-xs md:text-sm shadow-none hover:shadow-[0_0_15px_rgba(247,233,58,0.4)] whitespace-normal sm:whitespace-nowrap text-center flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-1.5 leading-tight"
           >
             <span className="hidden sm:inline">🚚 SOLICITAR RECOLECCIÓN GRATUITA</span>
-            <span className="sm:hidden font-extrabold leading-none">🚚 SOLICITAR RECOLECCIÓN</span>
-            <span className="sm:hidden font-bold text-[9px]">GRATUITA</span>
+            <span className="sm:hidden font-extrabold leading-none mb-0.5">🚚 SOLICITAR RECOLECCIÓN</span>
+            <span className="sm:hidden font-bold text-[9px] mt-0.5">GRATUITA</span>
           </a>
         </div>
       </div>
