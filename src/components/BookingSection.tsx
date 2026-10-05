@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import imageCompression from "browser-image-compression";
 import { submitBooking } from "@/app/actions/booking";
 
 // Form Validation Schema
@@ -36,6 +37,36 @@ export default function BookingSection() {
   const [isMounted, setIsMounted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{type: "success" | "error", text: string} | null>(null);
+  const [compressedImage, setCompressedImage] = useState<string | null>(null);
+  const [isCompressing, setIsCompressing] = useState(false);
+
+  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) {
+      setCompressedImage(null);
+      return;
+    }
+
+    setIsCompressing(true);
+    try {
+      const options = {
+        maxSizeMB: 0.5,
+        maxWidthOrHeight: 1024,
+        useWebWorker: true,
+      };
+      const compressedFile = await imageCompression(file, options);
+      
+      const reader = new FileReader();
+      reader.readAsDataURL(compressedFile);
+      reader.onloadend = () => {
+        setCompressedImage(reader.result as string);
+        setIsCompressing(false);
+      };
+    } catch (error) {
+      console.error("Error compressing image:", error);
+      setIsCompressing(false);
+    }
+  };
 
   const { register, handleSubmit, control, formState: { errors } } = useForm<PickupFormData>({
     resolver: zodResolver(pickupSchema),
@@ -52,7 +83,8 @@ export default function BookingSection() {
     
     const payload = {
       ...data,
-      businessHours: `${data.openTime} a ${data.closeTime}`
+      businessHours: `${data.openTime} a ${data.closeTime}`,
+      image: compressedImage
     };
     
     console.log("Sending payload:", payload);
@@ -299,6 +331,22 @@ export default function BookingSection() {
                     ></textarea>
                     {errors.question && <p className="text-red-500 text-xs mt-1.5 font-medium">{errors.question.message}</p>}
                   </div>
+
+                  <div>
+                    <label htmlFor="image" className="block text-sm font-bold text-[var(--color-primary-dark)] mb-1">
+                      Adjuntar foto de la pieza (Opcional)
+                    </label>
+                    <input 
+                      type="file" 
+                      id="image"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      disabled={isCompressing}
+                      className="w-full p-3 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-white text-black transition-all shadow-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[var(--color-accent-cyan)]/10 file:text-[var(--color-primary-dark)] hover:file:bg-[var(--color-accent-cyan)]/20 cursor-pointer"
+                    />
+                    {isCompressing && <p className="text-sm text-[var(--color-accent-cyan)] font-medium mt-2">Comprimiendo imagen, por favor espera...</p>}
+                    {compressedImage && !isCompressing && <p className="text-sm text-green-600 font-medium mt-2">✓ Imagen lista para enviar</p>}
+                  </div>
                 </div>
               </div>
 
@@ -326,7 +374,7 @@ export default function BookingSection() {
 
               <button 
                 type="submit" 
-                disabled={isSubmitting || submitMessage?.type === "success"}
+                disabled={isSubmitting || submitMessage?.type === "success" || isCompressing}
                 className="btn-primary w-full py-6 mt-8 disabled:opacity-50 disabled:cursor-not-allowed text-xl md:text-2xl"
               >
                 {/* Shine effect on button */}

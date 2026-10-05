@@ -76,6 +76,16 @@ export async function submitBooking(data: any) {
           `,
         });
 
+        const attachments = [];
+        if (data.image) {
+          const base64Data = data.image.split(",")[1];
+          attachments.push({
+            filename: 'pieza_adjunta.jpg',
+            content: base64Data,
+            encoding: 'base64'
+          });
+        }
+
         // 2. Correo al Dueño (Tío Kevin)
         await transporter.sendMail({
           from: `"Denteq System" <${process.env.GMAIL_USER}>`,
@@ -97,11 +107,13 @@ export async function submitBooking(data: any) {
                 <tr><td><strong>Horario de Atención:</strong></td><td>${data.businessHours}</td></tr>
                 <tr><td><strong>Día Preferido:</strong></td><td>${data.pickupDate}</td></tr>
                 <tr><td><strong>Problema/Piezas:</strong></td><td>${data.question || "No especificado"}</td></tr>
+                ${data.image ? '<tr><td colspan="2"><strong>Se adjuntó una imagen de la pieza en este correo.</strong></td></tr>' : ''}
               </table>
               <br/>
               <p><strong>Acción requerida:</strong> Llama al doctor para confirmar los datos y avísale al courier.</p>
             </div>
           `,
+          attachments: attachments.length > 0 ? attachments : undefined
         });
       } else {
         console.warn("Gmail credentials not provided, skipping email.");
