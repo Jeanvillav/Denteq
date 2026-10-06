@@ -39,13 +39,13 @@ export default function BookingSection() {
   const [submitMessage, setSubmitMessage] = useState<{type: "success" | "error", text: string} | null>(null);
   const [compressedImage, setCompressedImage] = useState<string | null>(null);
   const [isCompressing, setIsCompressing] = useState(false);
+  const [imageError, setImageError] = useState<string | null>(null);
 
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    setImageError(null);
+    setCompressedImage(null);
     const file = event.target.files?.[0];
-    if (!file) {
-      setCompressedImage(null);
-      return;
-    }
+    if (!file) return;
 
     setIsCompressing(true);
     try {
@@ -64,7 +64,19 @@ export default function BookingSection() {
       };
     } catch (error) {
       console.error("Error compressing image:", error);
-      setIsCompressing(false);
+      
+      // Fallback: Si falla la compresión pero la imagen original es menor a 1MB, enviarla directa
+      if (file.size < 1048576) {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onloadend = () => {
+          setCompressedImage(reader.result as string);
+          setIsCompressing(false);
+        };
+      } else {
+        setImageError("No pudimos procesar la imagen de tu celular (muy pesada o formato no compatible). Intenta con otra foto o envía sin foto.");
+        setIsCompressing(false);
+      }
     }
   };
 
@@ -344,8 +356,9 @@ export default function BookingSection() {
                       disabled={isCompressing}
                       className="w-full p-3 border border-[var(--color-accent-cyan)]/30 rounded-xl focus:ring-2 focus:ring-[var(--color-accent-cyan)] focus:border-[var(--color-accent-cyan)] outline-none bg-white text-black transition-all shadow-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[var(--color-accent-cyan)]/10 file:text-[var(--color-primary-dark)] hover:file:bg-[var(--color-accent-cyan)]/20 cursor-pointer"
                     />
-                    {isCompressing && <p className="text-sm text-[var(--color-accent-cyan)] font-medium mt-2">Comprimiendo imagen, por favor espera...</p>}
+                    {isCompressing && <p className="text-sm text-[var(--color-accent-cyan)] font-medium mt-2">Procesando imagen, por favor espera...</p>}
                     {compressedImage && !isCompressing && <p className="text-sm text-green-600 font-medium mt-2">✓ Imagen lista para enviar</p>}
+                    {imageError && !isCompressing && <p className="text-sm text-red-500 font-medium mt-2">{imageError}</p>}
                   </div>
                 </div>
               </div>
