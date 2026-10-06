@@ -61,6 +61,22 @@ export async function submitBooking(data: any) {
     try {
       if (process.env.GMAIL_USER && process.env.GMAIL_APP_PASSWORD) {
         
+        // 1. Correo al Doctor (Confirmación)
+        await transporter.sendMail({
+          from: `"Denteq" <denteq.ec@gmail.com>`,
+          replyTo: "denteq.ec@gmail.com",
+          to: data.email,
+          subject: "Hemos recibido tu solicitud de recolección - Denteq",
+          html: `
+            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+              <h2 style="color: #0A0F24;">¡Hola Dr./Dra. ${data.lastName}!</h2>
+              <p>Hemos recibido correctamente tu solicitud para recolectar tus piezas de mano.</p>
+              <p>Nuestro equipo revisará la información y <strong>te llamaremos muy pronto al ${data.phone}</strong> para coordinar los detalles exactos con el servicio de courier.</p>
+              <p>Gracias por confiar en Denteq.</p>
+            </div>
+          `,
+        });
+
         const attachments = [];
         if (data.image) {
           const base64Data = data.image.split(",")[1];
@@ -71,26 +87,10 @@ export async function submitBooking(data: any) {
           });
         }
 
-        // 1. Correo al Doctor (Confirmación)
-        await transporter.sendMail({
-          from: `"Denteq" <${process.env.GMAIL_USER}>`,
-          to: data.email,
-          subject: "Hemos recibido tu solicitud de recolección - Denteq",
-          html: `
-            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <h2 style="color: #0A0F24;">¡Hola Dr./Dra. ${data.lastName}!</h2>
-              <p>Hemos recibido correctamente tu solicitud para recolectar tus piezas de mano.</p>
-              <p>Nuestro equipo revisará la información y <strong>te llamaremos muy pronto al ${data.phone}</strong> para coordinar los detalles exactos con el servicio de courier.</p>
-              ${data.image ? '<p><em>Adjuntamos a este correo la foto que enviaste de tu pieza.</em></p>' : ''}
-              <p>Gracias por confiar en Denteq.</p>
-            </div>
-          `,
-          attachments: attachments.length > 0 ? attachments : undefined
-        });
-
         // 2. Correo al Dueño (Tío Kevin)
         await transporter.sendMail({
-          from: `"Denteq System" <${process.env.GMAIL_USER}>`,
+          from: `"Denteq System" <denteq.ec@gmail.com>`,
+          replyTo: "denteq.ec@gmail.com",
           to: "denteq.ec@gmail.com", // Notificación al correo de Tío Kevin
           subject: `NUEVA RECOLECCIÓN: ${data.firstName} ${data.lastName} - ${data.city}`,
           html: `

@@ -52,7 +52,7 @@ export default function BookingSection() {
       const options = {
         maxSizeMB: 0.5,
         maxWidthOrHeight: 1024,
-        useWebWorker: true,
+        useWebWorker: false,
       };
       const compressedFile = await imageCompression(file, options);
       
