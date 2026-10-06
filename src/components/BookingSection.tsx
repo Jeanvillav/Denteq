@@ -48,35 +48,65 @@ export default function BookingSection() {
     if (!file) return;
 
     setIsCompressing(true);
+    
     try {
-      const options = {
-        maxSizeMB: 0.5,
-        maxWidthOrHeight: 1024,
-        useWebWorker: false,
-      };
-      const compressedFile = await imageCompression(file, options);
-      
+      // Usar compresión nativa con HTML5 Canvas (más compatible con Android/Samsung)
       const reader = new FileReader();
-      reader.readAsDataURL(compressedFile);
-      reader.onloadend = () => {
-        setCompressedImage(reader.result as string);
-        setIsCompressing(false);
-      };
-    } catch (error) {
-      console.error("Error compressing image:", error);
+      reader.readAsDataURL(file);
       
-      // Fallback: Si falla la compresión pero la imagen original es menor a 1MB, enviarla directa
-      if (file.size < 1048576) {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onloadend = () => {
-          setCompressedImage(reader.result as string);
+      reader.onload = (e) => {
+        const img = new window.Image();
+        img.src = e.target?.result as string;
+        
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          const MAX_SIZE = 1024;
+          let width = img.width;
+          let height = img.height;
+
+          // Calcular la nueva resolución manteniendo la proporción
+          if (width > height) {
+            if (width > MAX_SIZE) {
+              height *= MAX_SIZE / width;
+              width = MAX_SIZE;
+            }
+          } else {
+            if (height > MAX_SIZE) {
+              width *= MAX_SIZE / height;
+              height = MAX_SIZE;
+            }
+          }
+
+          canvas.width = width;
+          canvas.height = height;
+          
+          const ctx = canvas.getContext('2d');
+          if (ctx) {
+            ctx.drawImage(img, 0, 0, width, height);
+            // Comprimir a JPEG con 60% de calidad
+            const dataUrl = canvas.toDataURL('image/jpeg', 0.6);
+            setCompressedImage(dataUrl);
+          } else {
+            throw new Error("No se pudo iniciar el canvas");
+          }
           setIsCompressing(false);
         };
-      } else {
-        setImageError("No pudimos procesar la imagen de tu celular (muy pesada o formato no compatible). Intenta con otra foto o envía sin foto.");
+        
+        img.onerror = () => {
+          setImageError("Error al leer el formato de la imagen. Intenta con otra.");
+          setIsCompressing(false);
+        };
+      };
+      
+      reader.onerror = () => {
+        setImageError("Error al cargar el archivo.");
         setIsCompressing(false);
-      }
+      };
+      
+    } catch (error) {
+      console.error("Error compressing image natively:", error);
+      setImageError("No pudimos procesar la imagen (formato no compatible o archivo corrupto).");
+      setIsCompressing(false);
     }
   };
 
